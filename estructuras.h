@@ -3,12 +3,13 @@
 
 #include <string>
 
-//Definición del struct Propietario.
+using namespace std;
+
 struct Propietario {
     int id;
-    string nombre;
+    string nombreCompleto;
     string contacto;
-    int mascota_id;
+    int id_Mascota;
 };
 
-#endif //ESTRUCTURAS_H
+#endif // ESTRUCTURAS_H
