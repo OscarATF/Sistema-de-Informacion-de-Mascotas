@@ -37,12 +37,10 @@ void menuPropietario() {
         cout << "1. Agregar Propietario\n";
         cout << "2. Listar Propietarios\n";
         cout << "3. Eliminar Propietario\n";
-        cout << "4. Actualizar Propietario";
+        cout << "4. Actualizar Propietario\n";
         cout << "5. Volver al Menú Principal\n";
         cout << "Seleccione una opción: ";
         cin >> opcion;
-        cin.ignore();
-
         switch (opcion) {
             case 1:
                 RegistrarPropietario();
