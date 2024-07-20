@@ -10,7 +10,7 @@ void Menu() {
     do {
         system("cls");
         cout << "\nSistema de gestión veterinaria\n\n";
-        cout << "1. Propietario" << endl
+        cout << "1. Gestion de Propietario" << endl
         << "2. Registrar Mascota" << endl
         << "3. Eliminar Mascota" << endl
         << "5. Actualizar Información de Mascotas" << endl
@@ -36,7 +36,9 @@ void menuPropietario() {
         cout << "\n--- Gestión de Propietarios ---\n";
         cout << "1. Agregar Propietario\n";
         cout << "2. Listar Propietarios\n";
-        cout << "3. Volver al Menú Principal\n";
+        cout << "3. Eliminar Propietario\n";
+        cout << "4. Actualizar Propietario";
+        cout << "5. Volver al Menú Principal\n";
         cout << "Seleccione una opción: ";
         cin >> opcion;
         cin.ignore();
@@ -49,13 +51,18 @@ void menuPropietario() {
                 listaDePropietarios();
                 break;
             case 3:
+				eliminarPropietario();
+                break;
+            case 4:
+                
+                break;
+            case 5:
                 cout << "Volviendo al Menú Principal...\n";
                 break;
             default:
                 cout << "Opción no válida, intente de nuevo.\n";
-                break;
         }
-    } while (opcion != 3);
+    } while (opcion != 5);
 }
 
 void RegistrarPropietario() {
@@ -88,4 +95,28 @@ void listaDePropietarios() {
         cout << "ID Mascota: " << propietarios[i].id_Mascota << "\n";
         cout << "-----------------------------\n";
     }
+}
+
+void eliminarPropietario() {
+	int indice;
+	int propietario;
+	system("cls");
+	cout<<"Lista de Propietarios:\n"<<endl;
+		for (int j=0;j<cantidaddepropietarios;j++) {
+			cout<<"Propietario "<<j+1<<" :\n"<<endl;
+			cout<<"Nombre: "<<propietarios[j].nombreCompleto<<endl<<endl;
+		}
+			cout<<"Digite el numero de contacto que desea eliminar: ";
+			cin>>propietario;
+			indice=propietario-1;
+		if (indice >= 0 && indice < cantidaddepropietarios) {
+			for (int j=indice;j<cantidaddepropietarios-1;++j) {
+				propietarios[j]=propietarios[j+1];
+			}
+			cantidaddepropietarios--;
+			cout<<"\nPropietario eliminado\n"<<endl;
+		} else {
+		cout<<"\nIndice no valido\n"<<endl;
+		}
+	system("pause");
 }
