@@ -1,9 +1,11 @@
-#ifndef VARIABLEGLOBALES_H
-#define VARIABLEGLOBALES_H
-extern const int max;
-extern int cantidadDePropietarios;
-extern int idPropietarios;
+#ifndef VARIABLES_GLOBALES_H
+#define VARIABLES_GLOBALES_H
 
+#include "estructuras.h"
 
+const int cantidadMaximaDePropietarios = 100;
 
-#endif // VARIABLEGLOBALES_H
+extern Propietario propietarios[cantidadMaximaDePropietarios];
+extern int cantidaddepropietarios;
+
+#endif // VARIABLES_GLOBALES_H

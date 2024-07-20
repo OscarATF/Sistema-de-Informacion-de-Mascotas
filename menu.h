@@ -1,6 +1,9 @@
 #ifndef MENU_H
 #define MENU_H
-//funcion Menu principal
+
 void Menu();
 void menuPropietario();
-#endif
+void RegistrarPropietario();
+void listaDePropietarios();
+
+#endif // MENU_H

@@ -1,9 +1,7 @@
-#include <iostream>
-#include <windows.h>
 #include "menu.h"
-using namespace std;
-
+#include <windows.h>
 int main() {
 	SetConsoleOutputCP(CP_UTF8);
-	Menu();
+    Menu();
+    return 0;
 }
