@@ -11,11 +11,11 @@ void Menu() {
         system("cls");
         cout << "\nSistema de gestión veterinaria\n\n";
         cout << "1. Gestion de Propietario" << endl
-        << "2. Registrar Mascota" << endl
-        << "3. Eliminar Mascota" << endl
-        << "5. Actualizar Información de Mascotas" << endl
-        << "7. Buscar Mascota por ID" << endl
-        << "9. Salir del programa" << endl;
+        	<< "2. Registrar Mascota" << endl
+       		<< "3. Eliminar Mascota" << endl
+        	<< "5. Actualizar Información de Mascotas" << endl
+        	<< "7. Buscar Mascota por ID" << endl
+        	<< "9. Salir del programa" << endl;
         cout << "\nDigite una opción: ";
         cin >> op;
         switch (op) {
@@ -52,7 +52,7 @@ void menuPropietario() {
 				eliminarPropietario();
                 break;
             case 4:
-                
+                actualizarPropietario();
                 break;
             case 5:
                 cout << "Volviendo al Menú Principal...\n";
@@ -64,20 +64,18 @@ void menuPropietario() {
 }
 
 void RegistrarPropietario() {
+	system("cls");
     if (cantidaddepropietarios >= cantidadMaximaDePropietarios) {
         cout << "No se pueden agregar más propietarios, límite alcanzado.\n";
         return;
     }
-
     Propietario p; //para la id
     p.id = cantidaddepropietarios + 1;
     cout << "Ingrese nombre completo: ";
+    cin.ignore();
     getline(cin, p.nombreCompleto);
     cout << "Ingrese contacto: ";
     getline(cin, p.contacto);
-    cout << "Ingrese ID de la mascota: ";
-    cin >> p.id_Mascota;
-    cin.ignore();
 
     propietarios[cantidaddepropietarios] = p;
     cantidaddepropietarios++;
@@ -116,5 +114,29 @@ void eliminarPropietario() {
 		} else {
 		cout<<"\nIndice no valido\n"<<endl;
 		}
+	system("pause");
+}
+
+void actualizarPropietario() {
+	int indice;
+	int propietario;
+	system("cls");
+	cout<<"Lista de Propietarios:\n"<<endl;
+		for (int i=0;i<cantidaddepropietarios;i++) {
+			cout<<"Propietario "<<i+1<<" :\n"<<endl;
+			cout<<"Nombre: "<<propietarios[i].nombreCompleto<<endl;
+			cout<<endl;
+		}
+	cout<<"Digite el numero de propietario que desea actualizar: ";
+	cin>>propietario;
+	indice=propietario-1;
+	cout<<"\nPropietario "<<propietario<<" seleccionado\n"<<endl;
+	cout<<"Ingrese el nuevo nombre del propietario : ";
+	cin.ignore();
+	getline(cin,propietarios[indice].nombreCompleto);
+	(propietarios[indice].nombreCompleto)[0]=toupper((propietarios[indice].nombreCompleto)[0]);
+	cout << "Ingrese el nuevo contacto: ";
+    getline(cin, propietarios[indice].contacto);
+	cout<<"\n\nPropietario actualizado\n"<<endl;
 	system("pause");
 }
