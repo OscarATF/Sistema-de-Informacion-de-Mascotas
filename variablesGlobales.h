@@ -3,9 +3,12 @@
 
 #include "estructuras.h"
 
-const int cantidadMaximaDePropietarios = 100;
+const int capacidadMaxima = 1000;
 
-extern Propietario propietarios[cantidadMaximaDePropietarios];
+extern Propietario propietarios[capacidadMaxima];
 extern int cantidaddepropietarios;
+
+extern Inventario productos[capacidadMaxima];
+extern int cantidaddeproductos;
 
 #endif // VARIABLES_GLOBALES_H

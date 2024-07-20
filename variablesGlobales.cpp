@@ -1,7 +1,7 @@
 #include "variablesGlobales.h"
 
 // Inicialización de los propietarios preestablecidos
-Propietario propietarios[cantidadMaximaDePropietarios] = {
+Propietario propietarios[capacidadMaxima] = {
     {1, "Juan Perez", "912345678", 101},
     {2, "Maria Garcia", "923456789", 102},
     {3, "Carlos Sanchez", "934567890", 103},
@@ -14,4 +14,28 @@ Propietario propietarios[cantidadMaximaDePropietarios] = {
     {10, "Marta Jimenez", "901234567", 110}
 };
 
-int cantidaddepropietarios = 10; // Inicializar el número de propietarios
+Inventario productos[capacidadMaxima] ={
+    {1, "Croquetas Pedigree Adulto", 20.00, 50},
+    {2, "Alimento húmedo Cesar", 1.50, 200},
+    {3, "Golosinas dentales Dentastix", 8.00, 100},
+    {4, "Snacks naturales Orejas de Cerdo", 15.00, 75},
+    {5, "Collar de nylon ajustable", 10.00, 150},
+    {6, "Arnés de seguridad", 18.00, 80},
+    {7, "Plato de acero inoxidable", 7.00, 120},
+    {8, "Cama ortopédica", 35.00, 40},
+    {9, "Pelota de goma Kong", 12.00, 60},
+    {10, "Juguete masticable Nylabone", 10.00, 70},
+    {11, "Juguete interactivo Kong Wobbler", 15.00, 50},
+    {12, "Peluches con sonido", 8.00, 90},
+    {13, "Champú anti-pulgas", 12.00, 100},
+    {14, "Cepillo de doble cara", 8.00, 110},
+    {15, "Toallitas húmedas Pet Wipes", 5.00, 200},
+    {16, "Cortaúñas para perros", 10.00, 80},
+    {17, "Suplementos vitamínicos", 20.00, 60},
+    {18, "Antiparasitarios Frontline", 30.00, 40},
+    {19, "Cepillo dental y pasta", 10.00, 90},
+    {20, "Botiquín de primeros auxilios", 25.00, 30}
+};
+
+int cantidaddepropietarios = 10;
+int cantidaddeproductos = 20; // Inicializar el número de propietarios
