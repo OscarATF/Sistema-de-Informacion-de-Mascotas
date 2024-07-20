@@ -11,11 +11,11 @@ void Menu() {
         system("cls");
         cout << "\nSistema de gestión veterinaria\n\n";
         cout << "1. Gestion de Propietario" << endl
-        << "2. Registrar Mascota" << endl
-        << "3. Eliminar Mascota" << endl
-        << "5. Actualizar Información de Mascotas" << endl
-        << "7. Buscar Mascota por ID" << endl
-        << "9. Salir del programa" << endl;
+        	<< "2. Registrar Mascota" << endl
+       		<< "3. Eliminar Mascota" << endl
+        	<< "5. Actualizar Información de Mascotas" << endl
+        	<< "7. Buscar Mascota por ID" << endl
+        	<< "9. Salir del programa" << endl;
         cout << "\nDigite una opción: ";
         cin >> op;
         switch (op) {
