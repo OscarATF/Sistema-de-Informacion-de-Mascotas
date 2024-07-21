@@ -234,7 +234,7 @@ void menuMascotas() {
             case 4:
                 break;
             case 5:
-            	cout<<"Saliendo del programa....";
+            	cout<<"Saliendo del programa.......";
             	break;
             default:
                 cout << "Opción no válida, intente de nuevo.\n";
