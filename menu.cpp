@@ -16,6 +16,7 @@ void Menu() {
        		<< "3. Eliminar Mascota" << endl
         	<< "5. Actualizar Información de Mascotas" << endl
         	<< "7. Buscar Mascota por ID" << endl
+        	<< "8. Gestion Inventario " << endl
         	<< "9. Salir del programa" << endl;
 
         cout << "\nDigite una opción: ";
@@ -92,6 +93,7 @@ void RegistrarPropietario() {
 }
 
 void listaDePropietarios() {
+	system("cls");
     cout << "\n--- Lista de Propietarios ---\n";
     for (int i = 0; i < cantidaddepropietarios; ++i) {
         cout << "Propietario " << propietarios[i].id << ":\n";
@@ -100,6 +102,7 @@ void listaDePropietarios() {
         cout << "ID Mascota: " << propietarios[i].id_Mascota << "\n";
         cout << "-----------------------------\n";
     }
+    system("pause");
 }
 
 
@@ -154,7 +157,7 @@ void RegistrarProducto() {
     cantidaddepropietarios++;
     cout << "\nProducto agregado exitosamente.\n\n";
     system("pause");
-    
+}
 
 void eliminarPropietario() {
 	int indice;
