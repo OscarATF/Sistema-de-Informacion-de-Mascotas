@@ -10,14 +10,11 @@ void Menu() {
     do {
         system("cls");
         cout << "\nSistema de gestión veterinaria\n\n";
-
+// Actualizando la lista del menu principal
         cout << "1. Gestion de Propietario" << endl
-        	<< "2. Registrar Mascota" << endl
-       		<< "3. Eliminar Mascota" << endl
-        	<< "5. Actualizar Información de Mascotas" << endl
-        	<< "7. Buscar Mascota por ID" << endl
-        	<< "8. Gestion Inventario " << endl
-        	<< "9. Salir del programa" << endl;
+        	<< "2. Gestión de Mascotas" << endl
+        	<< "3. Gestion Inventario " << endl
+        	<< "4. Salir del programa" << endl;
 
         cout << "\nDigite una opción: ";
         cin >> op;
@@ -28,12 +25,15 @@ void Menu() {
             case 2:
                 break;
             case 3:
-                break;
-            case 8:
             	menuInventario();
+                break;
+            case 4:
+            	cout<<"Saliendo del programa....";
             	break;
+    		default:
+    			cout<<"Ingrese una opción correcta";
         }
-    } while (op != 9);
+    } while (op != 4);
 }
 
 void menuPropietario() {
@@ -206,4 +206,38 @@ void actualizarPropietario() {
 	cout<<"\n\nPropietario actualizado\n"<<endl;
 	system("pause");
 
+}
+
+// Agregando funcion Gestion de mascotas
+void menuMascotas() {
+    int opcion;
+    do {
+    	system("cls");
+        cout << "\nGestión de mascotas\n\n";
+        cout << "1. Agregar Mascota\n";
+        cout << "2. Actualizar número de mascotas\n";
+        cout << "3. Eliminar mascotas\n";
+        cout << "4. Listar Mascotas\n";
+        cout << "5. Volver al Menú Principal\n";
+        cout << "\nSeleccione una opción: ";
+        cin >> opcion;
+        cin.ignore();
+
+        switch (opcion) {
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+				break;    
+            case 4:
+                break;
+            case 5:
+            	Menu();
+            	break;
+            default:
+                cout << "Opción no válida, intente de nuevo.\n";
+                break;
+        }
+    } while (opcion != 5);
 }
