@@ -234,7 +234,7 @@ void menuMascotas() {
             case 4:
                 break;
             case 5:
-            	cout<<"Saliendo del programa.......";
+            	cout<<"Saliendo del programa.........";
             	break;
             default:
                 cout << "Opción no válida, intente de nuevo.\n";
@@ -254,7 +254,7 @@ void RegistrarMascota() {
     cin.ignore();
     cout << "\nIngrese nombre de la mascota: "; getline(cin, m.nombre);
     cout<<"Ingrese la edad de la mascota: "; cin>> m.edad;
-    cout << "Ingrese la especie:"; cin >> m.especie;
+    cout << "Ingrese la especie: "; cin >> m.especie;
     cout<<"Ingrese la raza: "; cin>>m.raza;
     mascota[cantidadDeMascotas] = m;
     cantidadDeMascotas++;
