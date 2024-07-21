@@ -41,7 +41,7 @@ void menuPropietario() {
         cout << "\nGestión de Propietarios\n\n";
         cout << "1. Agregar Propietario\n";
         cout << "2. Listar Propietarios\n";
-        cout << "3. Volver al Menú Principal\n";
+        cout << "3. Volver al Menu Principal\n";
         cout << "Seleccione una opción: ";
         cin >> opcion;
         cin.ignore();
