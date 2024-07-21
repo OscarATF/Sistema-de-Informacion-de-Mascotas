@@ -242,7 +242,7 @@ void menuMascotas() {
         }
     } while (opcion != 5);
 }
-
+//Se añadió la funcion void registrarMascotas
 void RegistrarMascota() {
     if (cantidadDeMascotas >= capacidadMaxima) {
         cout << "No se pueden agregar más productos, límite alcanzado.\n";
