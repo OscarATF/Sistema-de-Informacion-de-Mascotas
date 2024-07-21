@@ -234,7 +234,7 @@ void menuMascotas() {
             case 4:
                 break;
             case 5:
-            	Menu();
+            	cout<<"Saliendo del programa.......";
             	break;
             default:
                 cout << "Opción no válida, intente de nuevo.\n";
@@ -242,7 +242,7 @@ void menuMascotas() {
         }
     } while (opcion != 5);
 }
-
+//Se añadió la funcion void registrarMascotas
 void RegistrarMascota() {
     if (cantidadDeMascotas >= capacidadMaxima) {
         cout << "No se pueden agregar más productos, límite alcanzado.\n";
