@@ -10,12 +10,14 @@ void Menu() {
     do {
         system("cls");
         cout << "\nSistema de gestión veterinaria\n\n";
+
         cout << "1. Gestion de Propietario" << endl
         	<< "2. Registrar Mascota" << endl
        		<< "3. Eliminar Mascota" << endl
         	<< "5. Actualizar Información de Mascotas" << endl
         	<< "7. Buscar Mascota por ID" << endl
         	<< "9. Salir del programa" << endl;
+
         cout << "\nDigite una opción: ";
         cin >> op;
         switch (op) {
@@ -26,6 +28,9 @@ void Menu() {
                 break;
             case 3:
                 break;
+            case 8:
+            	menuInventario();
+            	break;
         }
     } while (op != 9);
 }
@@ -33,7 +38,8 @@ void Menu() {
 void menuPropietario() {
     int opcion;
     do {
-        cout << "\n--- Gestión de Propietarios ---\n";
+    	system("cls");
+        cout << "\nGestión de Propietarios\n\n";
         cout << "1. Agregar Propietario\n";
         cout << "2. Listar Propietarios\n";
         cout << "3. Eliminar Propietario\n";
@@ -64,8 +70,11 @@ void menuPropietario() {
 }
 
 void RegistrarPropietario() {
+
+    if (cantidaddepropietarios >= capacidadMaxima) {
+
 	system("cls");
-    if (cantidaddepropietarios >= cantidadMaximaDePropietarios) {
+
         cout << "No se pueden agregar más propietarios, límite alcanzado.\n";
         return;
     }
@@ -92,6 +101,60 @@ void listaDePropietarios() {
         cout << "-----------------------------\n";
     }
 }
+
+
+// funcion Gestion de inventario.
+void menuInventario() {
+    int opcion;
+    do {
+    	system("cls");
+        cout << "\nGestión de Inventario\n\n";
+        cout << "1. Agregar Producto\n";
+        cout << "2. Actualizar Producto\n";
+        cout << "3. Eliminar Producto\n";
+        cout << "4. Listar Productos\n";
+        cout << "5. Volver al Menú Principal\n";
+        cout << "\nSeleccione una opción: ";
+        cin >> opcion;
+        cin.ignore();
+
+        switch (opcion) {
+            case 1:
+            	RegistrarProducto();
+                break;
+            case 2:
+                break;
+            case 4:
+                cout << "Volviendo al Menú Principal...\n";
+                break;
+            case 5:
+            	Menu();
+            	break;
+            default:
+                cout << "Opción no válida, intente de nuevo.\n";
+                break;
+        }
+    } while (opcion != 3);
+}
+
+void RegistrarProducto() {
+    if (cantidaddeproductos >= capacidadMaxima) {
+        cout << "No se pueden agregar más productos, límite alcanzado.\n";
+        return;
+    }
+
+    Inventario p; //para la id
+    p.id_producto = cantidaddeproductos + 1;
+    cout << "Ingrese nombre del producto: "; getline(cin, p.nombreDelProducto);
+    cout << "Ingrese cantidad: "; cin >> p.cantidad;
+    cout << "Ingrese el precio:"; cin >> p.precio;
+    cin.ignore();
+
+    productos[cantidaddeproductos] = p;
+    cantidaddepropietarios++;
+    cout << "\nProducto agregado exitosamente.\n\n";
+    system("pause");
+    
 
 void eliminarPropietario() {
 	int indice;
@@ -139,4 +202,5 @@ void actualizarPropietario() {
     getline(cin, propietarios[indice].contacto);
 	cout<<"\n\nPropietario actualizado\n"<<endl;
 	system("pause");
+
 }

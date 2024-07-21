@@ -12,4 +12,10 @@ struct Propietario {
     int id_Mascota;
 };
 
+struct Inventario {
+    int id_producto;
+    string nombreDelProducto;
+    float precio;
+    int cantidad;
+};
 #endif // ESTRUCTURAS_H
