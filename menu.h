@@ -11,4 +11,5 @@ void eliminarPropietario();
 void actualizarPropietario();
 void RegistrarMascota();
 void menuMascotas();
+void mostrarInventario();
 #endif // MENU_H

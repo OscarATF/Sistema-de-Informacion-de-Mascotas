@@ -5,12 +5,12 @@
 
 using namespace std;
 
+//FUNCION MENU
 void Menu() {
     int op;
     do {
         system("cls");
         cout << "\nSistema de gestión veterinaria\n\n";
-// Actualizando la lista del menu principal
         cout << "1. Gestion de Propietario" << endl
         	<< "2. Gestión de Mascotas" << endl
         	<< "3. Gestion Inventario " << endl
@@ -36,6 +36,7 @@ void Menu() {
         }
     } while (op != 4);
 }
+//FIN DE FUNCION MENU
 
 void menuPropietario() {
     int opcion;
@@ -107,11 +108,11 @@ void listaDePropietarios() {
 }
 
 
-// funcion Gestion de inventario.
+// FUNCION MENU DE INVENTARIO.   DANNY YAIR LUQUE PARI 2024-119013 <----------------------
 void menuInventario() {
     int opcion;
-    do {
-    	system("cls");
+    do{
+        system("cls");
         cout << "\nGestión de Inventario\n\n";
         cout << "1. Agregar Producto\n";
         cout << "2. Actualizar Producto\n";
@@ -120,8 +121,7 @@ void menuInventario() {
         cout << "5. Volver al Menú Principal\n";
         cout << "\nSeleccione una opción: ";
         cin >> opcion;
-        cin.ignore();
-
+        
         switch (opcion) {
             case 1:
             	RegistrarProducto();
@@ -129,18 +129,17 @@ void menuInventario() {
             case 2:
                 break;
             case 4:
-                cout << "Volviendo al Menú Principal...\n";
+            	mostrarInventario();
                 break;
-            case 5:
-            	Menu();
-            	break;
             default:
                 cout << "Opción no válida, intente de nuevo.\n";
                 break;
         }
-    } while (opcion != 3);
+ 	}while(opcion!=5);
 }
+//FIN DE FUNCION MENU DE INVENTARIO.
 
+//FUNCION REGISTRAR PRODUCTO
 void RegistrarProducto() {
     if (cantidaddeproductos >= capacidadMaxima) {
         cout << "No se pueden agregar más productos, límite alcanzado.\n";
@@ -149,17 +148,36 @@ void RegistrarProducto() {
 
     Inventario p; //para la id
     p.id_producto = cantidaddeproductos + 1;
+    cin.ignore();
     cout << "Ingrese nombre del producto: "; getline(cin, p.nombreDelProducto);
     cout << "Ingrese cantidad: "; cin >> p.cantidad;
     cout << "Ingrese el precio:"; cin >> p.precio;
-    cin.ignore();
+    
 
     productos[cantidaddeproductos] = p;
     cantidaddepropietarios++;
     cout << "\nProducto agregado exitosamente.\n\n";
     system("pause");
 }
+//FUNCION REGISTRAR PRODUCTO
 
+//MOSTRAR INVENTARIO
+void mostrarInventario() {
+	system("cls");
+    cout << "Lista de inventarios registrados:\n";
+    for (int i=0;i<cantidaddeproductos;i++) {
+
+	        cout << "ID: " << productos[i].id_producto;
+			cout << "\nNombre: " << productos[i].nombreDelProducto;
+			cout << "\nPrecio: " << productos[i].precio; 
+			cout << "\nCantidad:" << productos[i].cantidad<< "\n\n";
+	}
+    system("pause");
+}
+
+//FIN DE FUNCION MOSTRAR INVENTARIO
+
+//FUNCION ELIMINAR PROPIETARIO
 void eliminarPropietario() {
 	int indice;
 	int propietario;
@@ -184,6 +202,9 @@ void eliminarPropietario() {
 	system("pause");
 }
 
+//FIN DE ELIMINAR PROPIETARIO
+
+//FUNCION ACTUALIZAR PROPIETARIO
 void actualizarPropietario() {
 	int indice;
 	int propietario;
@@ -208,8 +229,9 @@ void actualizarPropietario() {
 	system("pause");
 
 }
+//FIN DE FUNCION ACTUALIZAR PROPIETARIO 
 
-// Agregando funcion Gestion de mascotas
+//FUNCION MENU MASCOTAS
 void menuMascotas() {
     int opcion;
     do {
@@ -242,7 +264,11 @@ void menuMascotas() {
         }
     } while (opcion != 5);
 }
-//Se añadió la funcion void registrarMascotas
+
+//FIN DE FUNCION MENU MASCOTAS
+
+//FUNCION REGISTRAR MASCOTA
+
 void RegistrarMascota() {
     if (cantidadDeMascotas >= capacidadMaxima) {
         cout << "No se pueden agregar más productos, límite alcanzado.\n";
@@ -261,3 +287,5 @@ void RegistrarMascota() {
     cout << "\nMascota agregado exitosamente.\n\n";
     system("pause");
 }
+
+//FIN DE FUNCION REGISTRAR MASCOTA
