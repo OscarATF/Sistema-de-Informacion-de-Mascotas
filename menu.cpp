@@ -23,6 +23,7 @@ void Menu() {
                 menuPropietario();
                 break;
             case 2:
+            	menuMascotas();
                 break;
             case 3:
             	menuInventario();
@@ -221,10 +222,10 @@ void menuMascotas() {
         cout << "5. Volver al Menú Principal\n";
         cout << "\nSeleccione una opción: ";
         cin >> opcion;
-        cin.ignore();
 
         switch (opcion) {
             case 1:
+            	RegistrarMascota();
                 break;
             case 2:
                 break;
@@ -242,3 +243,21 @@ void menuMascotas() {
     } while (opcion != 5);
 }
 
+void RegistrarMascota() {
+    if (cantidadDeMascotas >= capacidadMaxima) {
+        cout << "No se pueden agregar más productos, límite alcanzado.\n";
+        return;
+    }
+
+    Mascota m; //para la id
+    m.id_mascota = cantidadDeMascotas + 1;
+    cin.ignore();
+    cout << "\nIngrese nombre de la mascota: "; getline(cin, m.nombre);
+    cout<<"Ingrese la edad de la mascota: "; cin>> m.edad;
+    cout << "Ingrese la especie:"; cin >> m.especie;
+    cout<<"Ingrese la raza: "; cin>>m.raza;
+    mascota[cantidadDeMascotas] = m;
+    cantidadDeMascotas++;
+    cout << "\nMascota agregado exitosamente.\n\n";
+    system("pause");
+}

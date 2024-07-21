@@ -46,7 +46,7 @@ Mascota mascota[capacidadMaxima] = {
     {6, "DOKI", "Perro","Rottweiler", 2},
     {7, "CALVIN", "Perro","Chihuahueño",3},
     {8, "RAMBO", "Perro","Pastor alemán",5},
-    {9, "RABU", "Perro","Dóberman",6},
+    {9, "RAU", "Perro","Dóberman",6},
     {10, "LUA", "Perro","Shih Tzu", 1}
 };
 
