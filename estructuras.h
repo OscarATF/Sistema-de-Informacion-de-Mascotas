@@ -18,4 +18,12 @@ struct Inventario {
     float precio;
     int cantidad;
 };
+
+struct Mascota{
+	int id_mascota;
+	string nombre;
+	string especie;
+	string raza;
+	int edad;
+};
 #endif // ESTRUCTURAS_H
