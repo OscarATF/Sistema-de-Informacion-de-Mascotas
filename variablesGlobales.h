@@ -11,4 +11,7 @@ extern int cantidaddepropietarios;
 extern Inventario productos[capacidadMaxima];
 extern int cantidaddeproductos;
 
+extern Mascota mascota[capacidadMaxima];
+extern int cantidadDeMascotas;
+
 #endif // VARIABLES_GLOBALES_H

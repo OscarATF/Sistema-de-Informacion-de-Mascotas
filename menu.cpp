@@ -241,3 +241,4 @@ void menuMascotas() {
         }
     } while (opcion != 5);
 }
+

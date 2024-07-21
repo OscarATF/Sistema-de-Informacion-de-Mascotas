@@ -36,6 +36,20 @@ Inventario productos[capacidadMaxima] ={
     {19, "Cepillo dental y pasta", 10.00, 90},
     {20, "Botiquín de primeros auxilios", 25.00, 30}
 };
+//Agregando datos establecidos de la estructura de mascotas
+Mascota mascota[capacidadMaxima] = {
+    {1, "BOBY", "Perro", "Bulldog", 3},
+    {2, "RUFO", "Hámster","Rata",1},
+    {3, "HARRY", "Gato","Siamés",3},
+    {4, "PIPO", "Perro","Labrador retriever",2},
+    {5, "SAM", "Perro","Chihuahua",3},
+    {6, "DOKI", "Perro","Rottweiler", 2},
+    {7, "CALVIN", "Perro","Chihuahueño",3},
+    {8, "RAMBO", "Perro","Pastor alemán",5},
+    {9, "RABU", "Perro","Dóberman",6},
+    {10, "LUA", "Perro","Shih Tzu", 1}
+};
 
 int cantidaddepropietarios = 10;
 int cantidaddeproductos = 20; // Inicializar el número de propietarios
+int cantidadDeMascotas=10;
