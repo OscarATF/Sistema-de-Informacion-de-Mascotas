@@ -9,7 +9,6 @@ void RegistrarProducto();
 
 void eliminarPropietario();
 void actualizarPropietario();
-void RegistrarMascotas();
 
 void menuMascotas();
 void mostrarInventario();
