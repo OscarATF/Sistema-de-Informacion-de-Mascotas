@@ -122,7 +122,7 @@ void RegistrarProducto() {
     
 
     productos[cantidaddeproductos] = p;
-    cantidaddepropietarios++;
+    cantidaddeproductos++;
     cout << "\nProducto agregado exitosamente.\n\n";
     system("pause");
 }
