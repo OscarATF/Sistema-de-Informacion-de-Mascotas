@@ -7,7 +7,10 @@ void menuPropietario();
 void menuInventario();
 void RegistrarProducto();
 
-void RegistrarMascota();
+void eliminarPropietario();
+void actualizarPropietario();
+void RegistrarMascotas();
+
 void menuMascotas();
 void mostrarInventario();
 #endif // MENU_H

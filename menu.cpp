@@ -6,7 +6,6 @@
 
 using namespace std;
 
-//FUNCION MENU
 void Menu() {
     int op;
     do {
@@ -154,16 +153,16 @@ void menuMascotas() {
     	system("cls");
         cout << "\nGestión de mascotas\n\n";
         cout << "1. Agregar Mascota\n";
-        cout << "2. Actualizar número de mascotas\n";
+        cout << "2. Listar mascotas\n";
         cout << "3. Eliminar mascotas\n";
-        cout << "4. Listar Mascotas\n";
+        cout << "4. Actualizar número de mascotas\n";
         cout << "5. Volver al Menú Principal\n";
         cout << "\nSeleccione una opción: ";
         cin >> opcion;
 
         switch (opcion) {
             case 1:
-            	RegistrarMascota();
+            	RegistrarMascotas();
                 break;
             case 2:
                 break;
@@ -181,13 +180,12 @@ void menuMascotas() {
     } while (opcion != 5);
 }
 
-//FIN DE FUNCION MENU MASCOTAS
+//Se añadió la funcion void registrar Mascotas
+void RegistrarMascotas() {
 
-//FUNCION REGISTRAR MASCOTA
-
-void RegistrarMascota() {
     if (cantidadDeMascotas >= capacidadMaxima) {
         cout << "No se pueden agregar más productos, límite alcanzado.\n";
+        
         return;
     }
 
@@ -201,6 +199,8 @@ void RegistrarMascota() {
     mascota[cantidadDeMascotas] = m;
     cantidadDeMascotas++;
     cout << "\nMascota agregado exitosamente.\n\n";
+    
     system("pause");
 }
+
 
