@@ -2,14 +2,19 @@
 #define MENU_H
 
 void Menu();
+
+//Oscar
 void menuPropietario();
-
-void menuInventario();
-void RegistrarProducto();
-
 void eliminarPropietario();
 void actualizarPropietario();
 
-void menuMascotas();
+//Yair
+void menuInventario();
+void RegistrarProducto();
 void mostrarInventario();
+
+
+//wesley
+void menuMascotas();
+
 #endif // MENU_H
