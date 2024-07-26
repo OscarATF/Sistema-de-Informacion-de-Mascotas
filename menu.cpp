@@ -4,8 +4,8 @@
 #include <iostream>
 #include "propietario.h"
 #include "Mascota.h"
+#include "inventario.h"
 using namespace std;
-
 void Menu() {
     int op;
     do {
@@ -15,7 +15,6 @@ void Menu() {
         	<< "2. Gestión de Mascotas" << endl
         	<< "3. Gestion Inventario " << endl
         	<< "4. Salir del programa" << endl;
-
         cout << "\nDigite una opción: ";
         cin >> op;
         switch (op) {
@@ -71,10 +70,6 @@ void menuPropietario() {
         }
     } while (opcion != 5);
 }
-
-
-
-
 // FUNCION MENU DE INVENTARIO.   DANNY YAIR LUQUE PARI 2024-119013 <----------------------
 void menuInventario() {
     int opcion;
@@ -95,6 +90,9 @@ void menuInventario() {
                 break;
             case 2:
                 break;
+            case 3:
+            	eliminarInventario();
+            	break;
             case 4:
             	mostrarInventario();
                 break;
@@ -105,46 +103,6 @@ void menuInventario() {
  	}while(opcion!=5);
 }
 //FIN DE FUNCION MENU DE INVENTARIO.
-
-//FUNCION REGISTRAR PRODUCTO
-void RegistrarProducto() {
-    if (cantidaddeproductos >= capacidadMaxima) {
-        cout << "No se pueden agregar más productos, límite alcanzado.\n";
-        return;
-    }
-
-    Inventario p; //para la id
-    p.id_producto = cantidaddeproductos + 1;
-    cin.ignore();
-    cout << "Ingrese nombre del producto: "; getline(cin, p.nombreDelProducto);
-    cout << "Ingrese cantidad: "; cin >> p.cantidad;
-    cout << "Ingrese el precio:"; cin >> p.precio;
-    
-
-    productos[cantidaddeproductos] = p;
-    cantidaddeproductos++;
-    cout << "\nProducto agregado exitosamente.\n\n";
-    system("pause");
-}
-//FUNCION REGISTRAR PRODUCTO
-
-//MOSTRAR INVENTARIO
-void mostrarInventario() {
-	system("cls");
-    cout << "Lista de inventarios registrados:\n";
-    for (int i=0;i<cantidaddeproductos;i++) {
-
-	        cout << "ID: " << productos[i].id_producto;
-			cout << "\nNombre: " << productos[i].nombreDelProducto;
-			cout << "\nPrecio: " << productos[i].precio; 
-			cout << "\nCantidad:" << productos[i].cantidad<< "\n\n";
-	}
-    system("pause");
-}
-
-//FIN DE FUNCION MOSTRAR INVENTARIO
-
-
 
 //FUNCION MENU MASCOTAS
 void menuMascotas() {
