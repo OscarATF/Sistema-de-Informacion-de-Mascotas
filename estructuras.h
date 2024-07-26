@@ -26,4 +26,29 @@ struct Mascota{
 	string raza;
 	int edad;
 };
+
+struct AntecedentesMedicos {
+    string enfermedadesPrevias;
+    string cirugiasPasadas;
+    string alergiasConocidas;
+    string vacunaciones;
+};
+
+struct MotivoVisita {
+    string motivo;
+    string sintomas;
+};
+
+struct PlanSeguimiento {
+    string recomendaciones;
+    string proximaCita;
+};
+
+struct HistoriaClinica {
+    AntecedentesMedicos antecedentes;
+    MotivoVisita motivoVisita;
+    PlanSeguimiento planSeguimiento;
+    string notasVeterinario;
+    float facturacionPagos;
+};
 #endif // ESTRUCTURAS_H
