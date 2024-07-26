@@ -82,10 +82,9 @@ void actualizarInventario() {
 	cin>>producto;
 	indice=producto-1;
 	cout<<"\nProducto "<<producto<<" ha sido seleccionado\n"<<endl;
-	cout<<"Ingrese el nombre nuevo del producto : ";
-	cin.ignore();
-	getline(cin,productos[indice].nombreDelProducto);
-	(productos[indice].nombreDelProducto)[0]=toupper((productos[indice].nombreDelProducto)[0]);
+	system("pause");
+	system("cls");
+	cout<<"NOMBRE: "<<productos[indice].nombreDelProducto<<endl;
 	cout << "Ingrese la nueva cantidad: ";
     cin >> productos[indice].cantidad;
 	cout << "Ingrese el nuevo precio: ";
