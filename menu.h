@@ -5,6 +5,7 @@ void Menu();
 
 //Oscar
 void menuPropietario();
+void menuHistorial();
 
 //Yair
 void menuInventario();

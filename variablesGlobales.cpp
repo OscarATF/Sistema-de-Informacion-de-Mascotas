@@ -1,19 +1,5 @@
 #include "variablesGlobales.h"
 
-// Inicialización de los propietarios preestablecidos
-Propietario propietarios[capacidadMaxima] = {
-    {1, "Juan Perez", "912345678", 101},
-    {2, "Maria Garcia", "923456789", 102},
-    {3, "Carlos Sanchez", "934567890", 103},
-    {4, "Ana Martinez", "945678901", 104},
-    {5, "Luis Gomez", "956789012", 105},
-    {6, "Laura Diaz", "967890123", 106},
-    {7, "Pedro Rodriguez", "978901234", 107},
-    {8, "Sofia Lopez", "989012345", 108},
-    {9, "Diego Fernandez", "990123456", 109},
-    {10, "Marta Jimenez", "901234567", 110}
-};
-
 Inventario productos[capacidadMaxima] ={
     {1, "Croquetas Pedigree Adulto", 20.00, 50},
     {2, "Alimento húmedo Cesar", 1.50, 200},
@@ -49,7 +35,100 @@ Mascota mascota[capacidadMaxima] = {
     {9, "RAU", "Perro","Dóberman",6},
     {10, "LUA", "Perro","Shih Tzu", 1}
 };
+Propietario propietarios[capacidadMaxima] = {
+    {1, "Juan Perez", "912345678", mascota[0].id_mascota},
+    {2, "Maria Garcia", "923456789", mascota[1].id_mascota},
+    {3, "Carlos Sanchez", "934567890", mascota[2].id_mascota},
+    {4, "Ana Martinez", "945678901", mascota[3].id_mascota},
+    {5, "Luis Gomez", "956789012", mascota[4].id_mascota},
+    {6, "Laura Diaz", "967890123", mascota[5].id_mascota},
+    {7, "Pedro Rodriguez", "978901234", mascota[6].id_mascota},
+    {8, "Sofia Lopez", "989012345", mascota[7].id_mascota},
+    {9, "Diego Fernandez", "990123456", mascota[8].id_mascota},
+    {10, "Marta Jimenez", "901234567", mascota[9].id_mascota}
+};
+
+HistoriaClinica historias[capacidadMaxima] = {
+{
+            {"Diabetes", "Ninguna", "Ninguna", "Vacuna contra rabia, vacuna contra parvovirus"},
+            {"Examen de rutina", "Pérdida de apetito"},
+            {"Dieta balanceada, ejercicio regular", "15/08/2024"},
+            {"Se recomienda seguimiento por el veterinario en 6 meses."},
+            150.75
+        },
+        {
+            {"Ninguna", "Cirugía de esterilización", "Alergia a los ácaros", "Vacuna contra leucemia felina"},
+            {"Revisión de piel", "Picazón excesiva"},
+            {"Aplicar medicación antihistamínica", "10/08/2024"},
+            {"Se recomienda cambio de dieta y revisión en 2 semanas."},
+            75.50
+        },
+        {
+            {"Cardiopatía", "Ninguna", "Alergia a ciertos alimentos", "Vacunas anuales completas"},
+            {"Chequeo cardiaco", "Tos persistente"},
+            {"Revisar corazón, ajustar medicación", "20/08/2024"},
+            {"Necesario seguimiento con especialista en cardiología veterinaria."},
+            200.00
+        },
+        {
+            {"Ninguna", "Cirugía de fractura", "Ninguna", "Vacuna contra leptospirosis"},
+            {"Consulta general", "Cojera en pata trasera"},
+            {"Reposo, fisioterapia", "25/08/2024"},
+            {"Se recomienda una revisión de la pata en 1 mes."},
+            120.25
+        },
+        {
+            {"Ninguna", "Ninguna", "Alergia a alimentos", "Vacuna contra rinotraqueítis"},
+            {"Problemas respiratorios", "Estornudos frecuentes"},
+            {"Revisión respiratoria, cambios en dieta", "30/08/2024"},
+            {"Monitorizar síntomas y ajustar dieta según sea necesario."},
+            80.00
+        },
+        {
+            {"Obesidad", "Ninguna", "Ninguna", "Vacunas de rutina"},
+            {"Control de peso", "Exceso de peso"},
+            {"Dieta baja en calorías, más ejercicio", "05/09/2024"},
+            {"Revisar progreso en 1 mes y ajustar plan si es necesario."},
+            95.50
+        },
+        {
+            {"Ninguna", "Ninguna", "Ninguna", "Vacuna contra leucemia felina"},
+            {"Chequeo de salud general", "Ninguno"},
+            {"Recomendación de dieta y ejercicio", "15/09/2024"},
+            {"Control de salud general en 6 meses."},
+            65.75
+        },
+        {
+            {"Ninguna", "Cirugía ocular", "Ninguna", "Vacuna contra tos de las perreras"},
+            {"Problemas oculares", "Lagrimeo excesivo"},
+            {"Control de medicación ocular", "22/09/2024"},
+            {"Seguir las indicaciones del tratamiento ocular."},
+            110.00
+        },
+        {
+            {"Dermatitis", "Cirugía de piel", "Ninguna", "Vacuna contra panleucopenia"},
+            {"Problemas dermatológicos", "Piel seca"},
+            {"Aplicar cremas especiales", "30/09/2024"},
+            {"Revisar condición de la piel en 2 semanas."},
+            85.25
+        },
+        {
+            {"Ninguna", "Cirugía dental", "Alergia a pulgas", "Vacunas contra parvovirus y moquillo"},
+            {"Chequeo dental", "Mal aliento"},
+            {"Revisión dental periódica", "10/10/2024"},
+            {"Control dental en 6 meses y monitorear salud bucal."},
+            140.00
+        },
+        {
+            {"Hipotiroidismo", "Cirugía de tiroides", "Alergia a medicamentos", "Vacuna contra leucemia felina"},
+            {"Control de tiroides", "Pérdida de peso"},
+            {"Ajustar medicación, chequeo regular", "20/10/2024"},
+            {"Revisión del tratamiento para hipotiroidismo en 3 meses."},
+            160.00
+        }
+    };
 
 int cantidaddepropietarios = 10;
 int cantidaddeproductos = 20; // Inicializar el número de propietarios
 int cantidadDeMascotas=10;
+int cantidadDeHistorias=10;

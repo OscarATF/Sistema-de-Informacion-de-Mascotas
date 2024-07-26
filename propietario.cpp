@@ -2,6 +2,7 @@
 #include <iostream>
 #include "estructuras.h"
 #include "variablesGlobales.h"
+#include "Mascota.h"
 using namespace std;
 void RegistrarPropietario() {
 	system("cls");
@@ -16,11 +17,28 @@ void RegistrarPropietario() {
 	    getline(cin, p.nombreCompleto);
 	    cout << "Ingrese contacto: ";
 	    getline(cin, p.contacto);
-	
-	    propietarios[cantidaddepropietarios] = p;
-	    cantidaddepropietarios++;
-	    cout << "Propietario agregado exitosamente.\n";
-	    system("pause");
+	 	cout << "Seleccione la mascota para el propietario:\n";
+       	cout<<"\n---------Lista de mascotas---------\n";
+		for(int i=0;i<cantidadDeMascotas;i++){
+			cout<<"Mascota "<<mascota[i].id_mascota<<":\n";
+			cout<<"Nombre: "<<mascota[i].nombre<<"\n";
+    	}
+        int seleccion;
+        cout << "Ingrese el número de la mascota: ";
+        cin >> seleccion;
+        
+        if (seleccion > 0 && seleccion <= cantidadDeMascotas) {
+            p.id_Mascota = mascota[seleccion - 1].id_mascota;
+            propietarios[cantidaddepropietarios] = p;
+            cantidaddepropietarios++;
+            cout << "Propietario agregado exitosamente con la mascota.\n";
+	    	cout << "Propietario agregado exitosamente.\n";
+	    	system("pause");
+        } else {
+            cout << "Selección inválida. No se pudo registrar el propietario.\n";
+            return;
+        }
+	    
 	}
 }
 
