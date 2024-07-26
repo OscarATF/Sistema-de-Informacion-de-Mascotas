@@ -15,7 +15,7 @@ Inventario productos[capacidadMaxima] ={
     {12, "Peluches con sonido", 8.00, 90},
     {13, "Champú anti-pulgas", 12.00, 100},
     {14, "Cepillo de doble cara", 8.00, 110},
-    {15, "Toallitas húmedas Pet Wipes", 5.00, 200},
+    {15, "Parvovirus Canino (CPV)", 50.00, 200},
     {16, "Cortaúñas para perros", 10.00, 80},
     {17, "Suplementos vitamínicos", 20.00, 60},
     {18, "Antiparasitarios Frontline", 30.00, 40},

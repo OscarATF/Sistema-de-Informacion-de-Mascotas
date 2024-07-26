@@ -66,3 +66,31 @@ void eliminarInventario() {
 }
 
 //FIN DE ELIMINAR INVENTARIO
+
+//FUNCION ACTUALIZAR INVENTARIO
+void actualizarInventario() {
+	int indice;
+	int producto;
+	system("cls");
+	cout<<"Lista de Propietarios:\n"<<endl;
+		for (int i=0;i<cantidaddeproductos;i++) {
+			cout<<"Producto "<<i+1<<" :\n"<<endl;
+			cout<<"Nombre: "<<productos[i].nombreDelProducto<<endl;
+			cout<<endl;
+		}
+	cout<<"Digite el numero de producto que desea actualizar: ";
+	cin>>producto;
+	indice=producto-1;
+	cout<<"\nProducto "<<producto<<" ha sido seleccionado\n"<<endl;
+	system("pause");
+	system("cls");
+	cout<<"NOMBRE: "<<productos[indice].nombreDelProducto<<endl;
+	cout << "Ingrese la nueva cantidad: ";
+    cin >> productos[indice].cantidad;
+	cout << "Ingrese el nuevo precio: ";
+    cin >> productos[indice].precio;
+	cout<<"\n\nLos nuevos datos del producto fueron actualizados\n"<<endl;
+	system("pause");
+
+}
+//FIN DE FUNCION ACTUALIZAR PROPIETARIO 

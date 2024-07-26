@@ -94,6 +94,7 @@ void menuInventario() {
             	RegistrarProducto();
                 break;
             case 2:
+            	actualizarInventario();
                 break;
             case 3:
             	eliminarInventario();
