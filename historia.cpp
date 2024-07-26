@@ -8,6 +8,7 @@
 using namespace std;
 
 void listarHistorias() {
+	system("cls");
 	 for (int i = 0; i < cantidadDeHistorias; ++i) {
         cout << "Historia Clinica " << i + 1 << ":" << endl;
         cout << "Propietario: " << propietarios[i].nombreCompleto << ", "  
