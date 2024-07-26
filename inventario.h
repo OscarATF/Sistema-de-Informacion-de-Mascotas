@@ -4,4 +4,6 @@
 void RegistrarProducto();
 void mostrarInventario();
 void eliminarInventario();
+void actualizarInventario();
+
 #endif
