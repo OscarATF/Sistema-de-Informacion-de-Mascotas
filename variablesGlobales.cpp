@@ -24,28 +24,28 @@ Inventario productos[capacidadMaxima] ={
 };
 //Agregando datos establecidos de la estructura de mascotas
 Mascota mascota[capacidadMaxima] = {
-    {1, "BOBY", "Perro", "Bulldog", 3},
-    {2, "RUFO", "Hámster","Rata",1},
-    {3, "HARRY", "Gato","Siamés",3},
-    {4, "PIPO", "Perro","Labrador retriever",2},
-    {5, "SAM", "Perro","Chihuahua",3},
-    {6, "DOKI", "Perro","Rottweiler", 2},
-    {7, "CALVIN", "Perro","Chihuahueño",3},
-    {8, "RAMBO", "Perro","Pastor alemán",5},
-    {9, "RAU", "Perro","Dóberman",6},
-    {10, "LUA", "Perro","Shih Tzu", 1}
+    {0, "BOBY", "Perro", "Bulldog", 3},
+    {1, "RUFO", "Hámster","Rata",1},
+    {2, "HARRY", "Gato","Siamés",3},
+    {3, "PIPO", "Perro","Labrador retriever",2},
+    {4, "SAM", "Perro","Chihuahua",3},
+    {5, "DOKI", "Perro","Rottweiler", 2},
+    {6, "CALVIN", "Perro","Chihuahueño",3},
+    {7, "RAMBO", "Perro","Pastor alemán",5},
+    {8, "RAU", "Perro","Dóberman",6},
+    {9, "LUA", "Perro","Shih Tzu", 1}
 };
 Propietario propietarios[capacidadMaxima] = {
-    {1, "Juan Perez", "912345678", mascota[0].id_mascota},
-    {2, "Maria Garcia", "923456789", mascota[1].id_mascota},
-    {3, "Carlos Sanchez", "934567890", mascota[2].id_mascota},
-    {4, "Ana Martinez", "945678901", mascota[3].id_mascota},
-    {5, "Luis Gomez", "956789012", mascota[4].id_mascota},
-    {6, "Laura Diaz", "967890123", mascota[5].id_mascota},
-    {7, "Pedro Rodriguez", "978901234", mascota[6].id_mascota},
-    {8, "Sofia Lopez", "989012345", mascota[7].id_mascota},
-    {9, "Diego Fernandez", "990123456", mascota[8].id_mascota},
-    {10, "Marta Jimenez", "901234567", mascota[9].id_mascota}
+    {0, "Juan Perez", "912345678", mascota[0].id_mascota},
+    {1, "Maria Garcia", "923456789", mascota[1].id_mascota},
+    {2, "Carlos Sanchez", "934567890", mascota[2].id_mascota},
+    {3, "Ana Martinez", "945678901", mascota[3].id_mascota},
+    {4, "Luis Gomez", "956789012", mascota[4].id_mascota},
+    {5, "Laura Diaz", "967890123", mascota[5].id_mascota},
+    {6, "Pedro Rodriguez", "978901234", mascota[6].id_mascota},
+    {7, "Sofia Lopez", "989012345", mascota[7].id_mascota},
+    {8, "Diego Fernandez", "990123456", mascota[8].id_mascota},
+    {9, "Marta Jimenez", "901234567", mascota[9].id_mascota}
 };
 
 HistoriaClinica historias[capacidadMaxima] = {
