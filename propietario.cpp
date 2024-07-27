@@ -6,7 +6,11 @@
 using namespace std;
 void RegistrarPropietario() {
 	system("cls");
-    if (cantidaddepropietarios >= capacidadMaxima) {
+	if (cantidadDeMascotas<=10) {
+		cout<<"Ingrese antes una mascota"<<endl;
+		system("pause");
+		return;
+	} else if (cantidaddepropietarios >= capacidadMaxima) {
         cout << "No se pueden agregar más propietarios, límite alcanzado.\n";
         return;
     } else {
@@ -46,7 +50,7 @@ void listaDePropietarios() {
 	system("cls");
     cout << "\n--- Lista de Propietarios ---\n";
     for (int i = 0; i < cantidaddepropietarios; ++i) {
-        cout << "Propietario " << propietarios[i].id << ":\n";
+        cout << "Propietario " << i+1 << ":\n";
         cout << "Nombre Completo: " << propietarios[i].nombreCompleto << "\n";
         cout << "Contacto: " << propietarios[i].contacto << "\n";
         cout << "-----------------------------\n";

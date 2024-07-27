@@ -31,7 +31,7 @@ void ListarMascotas(){
 	system("cls");
 	cout<<"\n---------Lista de mascotas---------\n";
 	for(int i=0;i<cantidadDeMascotas;i++){
-		cout<<"Mascota "<<mascota[i].id_mascota<<":\n";
+		cout<<"Mascota "<<mascota[i].id_mascota<<":\n\n";
 		cout<<"Nombre: "<<mascota[i].nombre<<"\n";
 		cout<<"Edad: "<<mascota[i].edad<<"\n";
 		cout<<"Especie: "<<mascota[i].especie<<"\n";
@@ -41,3 +41,28 @@ void ListarMascotas(){
 	system("pause");	
 }
 
+// Nueva funcion de eliminar mascotas
+ void EliminarMascotas() {
+	int id_mascota;
+	int mascotas;
+	system("cls");
+	cout<<"Lista de Mascotas:\n"<<endl;
+		for (int i=0;i<cantidadDeMascotas;i++) {
+			cout<<"Mascota "<<i+1<<" :\n"<<endl;
+			cout<<"Nombre: "<<mascota[i].nombre<<endl<<endl;
+			cout<<"\n--------------------------------------\n";
+		}
+			cout<<"Digite el numero de contacto que desea eliminar: ";
+			cin>>mascotas;
+			id_mascota=mascotas-1;
+		if (id_mascota >= 0 && id_mascota < cantidadDeMascotas) {
+			for (int i=id_mascota;i<cantidadDeMascotas-1;++i) {
+				mascota[i]=mascota[i+1];
+			}
+			cantidadDeMascotas--;
+			cout<<"\nMascota eliminada\n"<<endl;
+		} else {
+		cout<<"\nIndice no valido\n"<<endl;
+		}
+	system("pause");
+}

@@ -52,5 +52,14 @@ struct HistoriaClinica {
     float facturacionPagos;
 };
 
+struct Ventas {
+    int id;                    
+    int cantidad;
+	float precioDeVenta;               
+    string nombreDelCliente; 
+    string metodoDePago;
+    int idproductoComprado;
+	string fecha;            
+};
 
 #endif

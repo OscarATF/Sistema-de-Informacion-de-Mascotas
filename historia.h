@@ -2,5 +2,6 @@
 #define HISTORIA_H
 
 void listarHistorias();
+void agregarHistoria();
 
 #endif
