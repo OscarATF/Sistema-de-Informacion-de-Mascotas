@@ -128,7 +128,17 @@ HistoriaClinica historias[capacidadMaxima] = {
         }
     };
 
+Ventas ventas[capacidadMaxima] = {
+    {1, 10, productos[1].precio * 10, "Pedro Martinez", "Pago en efectivo","10/07/2024"},
+    {2, 15, productos[2].precio * 15, "Ana Lopez", "Tarjeta de crédito","10/07/2024"},
+    {3, 8, productos[3].precio * 8, "Carlos Ruiz", "Transferencia bancaria","11/07/2024"},
+    {4, 5, productos[4].precio * 5, "Laura Sanchez", "Pago en efectivo","11/07/2024"}
+};
+
+
+
 int cantidaddepropietarios = 10;
-int cantidaddeproductos = 20; // Inicializar el número de propietarios
+int cantidaddeproductos = 20; // cantidad de productos del inventario.
 int cantidadDeMascotas=10;
 int cantidadDeHistorias=10;
+int cantidaddeventas=4;

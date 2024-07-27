@@ -196,6 +196,7 @@ void menuVentas(){
             case 1:
                 break;
             case 2:
+            	mostrarVentas();
                 break;
             case 3:
 				break;    
