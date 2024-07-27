@@ -3,5 +3,6 @@
 
 void RegistrarMascotas();
 void ListarMascotas();
+void EliminarMascotas();
 
 #endif

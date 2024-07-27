@@ -137,6 +137,7 @@ void menuMascotas() {
             	ListarMascotas();
                 break;
             case 3:
+            	EliminarMascotas();
 				break;    
             case 4:
                 break;
