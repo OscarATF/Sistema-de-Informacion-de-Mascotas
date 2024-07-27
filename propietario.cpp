@@ -108,6 +108,5 @@ void actualizarPropietario() {
     getline(cin, propietarios[indice].contacto);
 	cout<<"\n\nPropietario actualizado\n"<<endl;
 	system("pause");
-
 }
 //FIN DE FUNCION ACTUALIZAR PROPIETARIO 
