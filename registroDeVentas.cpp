@@ -10,6 +10,7 @@ void registrarVentas() {
         cout << "No se pueden agregar más ventas, límite alcanzado.\n";
         return;
     } else {
+    	int seleccion;
 	    Ventas p; //para la id
 	    p.id = cantidaddeventas + 1;
 	    cout << "Ingrese nombre del cliente: ";
@@ -23,10 +24,11 @@ void registrarVentas() {
 	    cout << "\nIngrese el numero del producto: "; cin >> p.idproductoComprado;
     	cout << "Ingrese la cantidad de venta: "; cin >> p.cantidad;
     	cout << "Ingrese el precio de venta: "; cin >> p.precioDeVenta;
-    	
+    	productos[p.idproductoComprado-1].cantidad-=p.cantidad;
     ventas[cantidaddeventas] = p;
     cantidaddeventas++;
     cout << "\nLa venta a sido registrada correctamente.\n\n";
+    
     system("pause");
 	}
 }
