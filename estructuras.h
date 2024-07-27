@@ -49,7 +49,6 @@ struct HistoriaClinica {
     MotivoVisita motivoVisita;
     PlanSeguimiento planSeguimiento;
     string notasVeterinario;
-    float facturacionPagos;
 };
 
 struct Ventas {
