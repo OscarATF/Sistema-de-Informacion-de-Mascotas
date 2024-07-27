@@ -1,4 +1,5 @@
 #include "variablesGlobales.h"
+
 #include "registroDeVentas.h"
 int cantidaddepropietarios = 10;
 int cantidaddeproductos = 20; // cantidad de productos del inventario.
@@ -27,6 +28,7 @@ Inventario productos[capacidadMaxima] ={
     {18, "Antiparasitarios Frontline", 30.00, 40},
     {19, "Cepillo dental y pasta", 10.00, 90},
     {20, "Botiquín de primeros auxilios", 25.00,30}
+
 };
 //Agregando datos establecidos de la estructura de mascotas
 Mascota mascota[capacidadMaxima] = {
@@ -55,82 +57,65 @@ Propietario propietarios[capacidadMaxima] = {
 };
 
 HistoriaClinica historias[capacidadMaxima] = {
-{
+		{
             {"Diabetes", "Ninguna", "Ninguna", "Vacuna contra rabia, vacuna contra parvovirus"},
             {"Examen de rutina", "Pérdida de apetito"},
             {"Dieta balanceada, ejercicio regular", "15/08/2024"},
-            {"Se recomienda seguimiento por el veterinario en 6 meses."},
-            150.75
+            {"Se recomienda seguimiento por el veterinario en 6 meses."}
         },
         {
             {"Ninguna", "Cirugía de esterilización", "Alergia a los ácaros", "Vacuna contra leucemia felina"},
             {"Revisión de piel", "Picazón excesiva"},
             {"Aplicar medicación antihistamínica", "10/08/2024"},
-            {"Se recomienda cambio de dieta y revisión en 2 semanas."},
-            75.50
+            {"Se recomienda cambio de dieta y revisión en 2 semanas."}
         },
         {
             {"Cardiopatía", "Ninguna", "Alergia a ciertos alimentos", "Vacunas anuales completas"},
             {"Chequeo cardiaco", "Tos persistente"},
             {"Revisar corazón, ajustar medicación", "20/08/2024"},
-            {"Necesario seguimiento con especialista en cardiología veterinaria."},
-            200.00
+            {"Necesario seguimiento con especialista en cardiología veterinaria."}
         },
         {
             {"Ninguna", "Cirugía de fractura", "Ninguna", "Vacuna contra leptospirosis"},
             {"Consulta general", "Cojera en pata trasera"},
             {"Reposo, fisioterapia", "25/08/2024"},
-            {"Se recomienda una revisión de la pata en 1 mes."},
-            120.25
+            {"Se recomienda una revisión de la pata en 1 mes."}
         },
         {
             {"Ninguna", "Ninguna", "Alergia a alimentos", "Vacuna contra rinotraqueítis"},
             {"Problemas respiratorios", "Estornudos frecuentes"},
             {"Revisión respiratoria, cambios en dieta", "30/08/2024"},
-            {"Monitorizar síntomas y ajustar dieta según sea necesario."},
-            80.00
+            {"Monitorizar síntomas y ajustar dieta según sea necesario."}
         },
         {
             {"Obesidad", "Ninguna", "Ninguna", "Vacunas de rutina"},
             {"Control de peso", "Exceso de peso"},
             {"Dieta baja en calorías, más ejercicio", "05/09/2024"},
-            {"Revisar progreso en 1 mes y ajustar plan si es necesario."},
-            95.50
+            {"Revisar progreso en 1 mes y ajustar plan si es necesario."}
         },
         {
             {"Ninguna", "Ninguna", "Ninguna", "Vacuna contra leucemia felina"},
             {"Chequeo de salud general", "Ninguno"},
             {"Recomendación de dieta y ejercicio", "15/09/2024"},
-            {"Control de salud general en 6 meses."},
-            65.75
+            {"Control de salud general en 6 meses."}
         },
         {
             {"Ninguna", "Cirugía ocular", "Ninguna", "Vacuna contra tos de las perreras"},
             {"Problemas oculares", "Lagrimeo excesivo"},
             {"Control de medicación ocular", "22/09/2024"},
-            {"Seguir las indicaciones del tratamiento ocular."},
-            110.00
+            {"Seguir las indicaciones del tratamiento ocular."}
         },
         {
             {"Dermatitis", "Cirugía de piel", "Ninguna", "Vacuna contra panleucopenia"},
             {"Problemas dermatológicos", "Piel seca"},
             {"Aplicar cremas especiales", "30/09/2024"},
-            {"Revisar condición de la piel en 2 semanas."},
-            85.25
+            {"Revisar condición de la piel en 2 semanas."}
         },
         {
             {"Ninguna", "Cirugía dental", "Alergia a pulgas", "Vacunas contra parvovirus y moquillo"},
             {"Chequeo dental", "Mal aliento"},
             {"Revisión dental periódica", "10/10/2024"},
-            {"Control dental en 6 meses y monitorear salud bucal."},
-            140.00
-        },
-        {
-            {"Hipotiroidismo", "Cirugía de tiroides", "Alergia a medicamentos", "Vacuna contra leucemia felina"},
-            {"Control de tiroides", "Pérdida de peso"},
-            {"Ajustar medicación, chequeo regular", "20/10/2024"},
-            {"Revisión del tratamiento para hipotiroidismo en 3 meses."},
-            160.00
+            {"Control dental en 6 meses y monitorear salud bucal."}
         }
     };
 

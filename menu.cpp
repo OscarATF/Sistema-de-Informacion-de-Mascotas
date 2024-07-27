@@ -137,6 +137,7 @@ void menuMascotas() {
             	ListarMascotas();
                 break;
             case 3:
+            	EliminarMascotas();
 				break;    
             case 4:
                 break;
@@ -164,11 +165,13 @@ int opcion;
 
         switch (opcion) {
             case 1:
+            	agregarHistoria();
                 break;
             case 2:
             	listarHistorias();
                 break;
             case 3:
+            	actualizarHistoria();
 				break;    
             case 4:
             	break;
