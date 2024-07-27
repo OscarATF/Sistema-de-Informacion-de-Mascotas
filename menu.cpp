@@ -171,6 +171,7 @@ int opcion;
             	listarHistorias();
                 break;
             case 3:
+            	actualizarHistoria();
 				break;    
             case 4:
             	break;

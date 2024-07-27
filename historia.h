@@ -3,5 +3,6 @@
 
 void listarHistorias();
 void agregarHistoria();
+void actualizarHistoria();
 
 #endif
