@@ -5,9 +5,11 @@ void Menu();
 
 //Oscar
 void menuPropietario();
+void menuHistorial();
 
 //Yair
 void menuInventario();
+void menuVentas();
 
 //wesley
 void menuMascotas();

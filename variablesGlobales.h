@@ -14,4 +14,7 @@ extern int cantidaddeproductos;
 extern Mascota mascota[capacidadMaxima];
 extern int cantidadDeMascotas;
 
+extern HistoriaClinica historias[capacidadMaxima];
+extern int cantidadDeHistorias;
+
 #endif // VARIABLES_GLOBALES_H

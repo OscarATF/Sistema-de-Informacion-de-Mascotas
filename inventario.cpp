@@ -33,8 +33,9 @@ void mostrarInventario() {
     for (int i=0;i<cantidaddeproductos;i++) {
 	        cout << "ID: " << productos[i].id_producto;
 			cout << "\nNombre: " << productos[i].nombreDelProducto;
-			cout << "\nPrecio: " << productos[i].precio; 
-			cout << "\nCantidad:" << productos[i].cantidad<< "\n\n";
+			cout << "\nCantidad:" << productos[i].cantidad;
+			cout << "\nPrecio: " << productos[i].precio<< "\n\n";
+			cout << "----------------------------------------------\n";
 	}
     system("pause");
 }
@@ -47,8 +48,10 @@ void eliminarInventario() {
 	system("cls");
 	cout<<"Lista de Productos:\n"<<endl;
 		for (int j=0;j<cantidaddeproductos;j++) {
-			cout<<"Productos "<<j+1<<" :\n"<<endl;
-			cout<<"Nombre: "<<productos[j].nombreDelProducto<<endl<<endl;
+			cout<<"Productos "<<j+1;
+			cout<<" | Nombre: "<<productos[j].nombreDelProducto<<endl;
+			cout<<"---------------------------------------------------------------";
+			cout<<endl;
 		}
 			cout<<"Digite el numero de producto que desea eliminar: ";
 			cin>>producto;
@@ -76,21 +79,22 @@ void actualizarInventario() {
 		for (int i=0;i<cantidaddeproductos;i++) {
 			cout<<"Producto "<<i+1<<" :\n"<<endl;
 			cout<<"Nombre: "<<productos[i].nombreDelProducto<<endl;
+			cout<<"Cantidad: "<<productos[i].cantidad<<endl;
+			cout<<"Precio: "<<productos[i].precio<<endl;
 			cout<<endl;
 		}
 	cout<<"Digite el numero de producto que desea actualizar: ";
 	cin>>producto;
 	indice=producto-1;
-	cout<<"\nProducto "<<producto<<" ha sido seleccionado\n"<<endl;
-	cout<<"Ingrese el nombre nuevo del producto : ";
-	cin.ignore();
-	getline(cin,productos[indice].nombreDelProducto);
-	(productos[indice].nombreDelProducto)[0]=toupper((productos[indice].nombreDelProducto)[0]);
+	cout<<"\nProducto "<<producto<<" ha sido seleccionado\n";
+	system("pause");
+	system("cls");
+	cout<<"NOMBRE: "<<productos[indice].nombreDelProducto<<endl<<endl;
 	cout << "Ingrese la nueva cantidad: ";
     cin >> productos[indice].cantidad;
 	cout << "Ingrese el nuevo precio: ";
     cin >> productos[indice].precio;
-	cout<<"\n\nLos nuevos datos del producto fueron actualizados\n"<<endl;
+	cout<<"\nLos nuevos datos del producto fueron actualizados\n"<<endl;
 	system("pause");
 
 }
