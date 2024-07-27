@@ -10,16 +10,16 @@ void RegistrarProducto() {
         return;
     }
 
-    Inventario p; //para la id
-    p.id_producto = cantidaddeproductos + 1;
+    Inventario inv; //para la id
+    inv.id_producto = cantidaddeproductos + 1;
     cin.ignore();
     system("cls");
-    cout << "Ingrese nombre del producto: "; getline(cin, p.nombreDelProducto);
-    cout << "Ingrese cantidad: "; cin >> p.cantidad;
-    cout << "Ingrese el precio:"; cin >> p.precio;
+    cout << "Ingrese nombre del producto: "; getline(cin, inv.nombreDelProducto);
+    cout << "Ingrese cantidad: "; cin >> inv.cantidad;
+    cout << "Ingrese el precio:"; cin >> inv.precio;
     
 
-    productos[cantidaddeproductos] = p;
+    productos[cantidaddeproductos] = inv;
     cantidaddeproductos++;
     cout << "\nProducto agregado exitosamente.\n\n";
     system("pause");
@@ -29,7 +29,7 @@ void RegistrarProducto() {
 //MOSTRAR INVENTARIO
 void mostrarInventario() {
 	system("cls");
-    cout << "Lista de inventarios registrados:\n";
+    cout << "Lista de productos registrados:\n";
     for (int i=0;i<cantidaddeproductos;i++) {
 	        cout << "ID: " << productos[i].id_producto;
 			cout << "\nNombre: " << productos[i].nombreDelProducto;

@@ -58,6 +58,7 @@ struct Ventas {
 	float precioDeVenta;               
     string nombreDelCliente; 
     string metodoDePago;
+    int idproductoComprado;
 	string fecha;            
 };
 

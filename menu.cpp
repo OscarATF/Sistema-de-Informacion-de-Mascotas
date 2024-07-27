@@ -200,6 +200,7 @@ void menuVentas(){
             	mostrarVentas();
                 break;
             case 3:
+            	buscarVentas();
 				break;    
             case 4:
             	break;

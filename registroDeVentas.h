@@ -3,4 +3,5 @@
 
 void mostrarVentas();
 void registrarVentas();
+void buscarVentas();
 #endif
