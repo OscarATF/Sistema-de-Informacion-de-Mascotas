@@ -66,3 +66,27 @@ void ListarMascotas(){
 		}
 	system("pause");
 }
+//FUNCION ACTUALIZAR MASCOTA
+void ActualizarMascota() {
+	int id_mascota;
+	int mascotas;
+	system("cls");
+	cout<<"Lista de Mascotas:\n"<<endl;
+		for (int i=0;i<cantidadDeMascotas;i++) {
+			cout<<"Mascota "<<i+1<<" :\n"<<endl;
+			cout<<"Nombre: "<<mascota[i].nombre<<endl<<endl;
+			cout<<"\n--------------------------------------\n";
+		}
+	cout<<"Digite el numero de la mascota que desea actualizar: ";
+	cin>>mascotas;
+	id_mascota=mascotas-1;
+	cout<<"\nMascota "<<mascotas<<" seleccionado\n"<<endl;
+	cout<<"Ingrese el nuevo nombre de la mascota : ";
+	cin.ignore();
+	getline(cin,mascota[id_mascota].nombre);
+	cout << "Ingrese la nueva edad de la mascota: ";
+    cin>>mascota[id_mascota].edad;
+	cout<<"\n\nMascota actualizado\n"<<endl;
+	system("pause");
+
+}

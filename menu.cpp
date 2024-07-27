@@ -124,7 +124,7 @@ void menuMascotas() {
         cout << "1. Agregar Mascota\n";
         cout << "2. Listar mascotas\n";
         cout << "3. Eliminar mascotas\n";
-        cout << "4. Actualizar número de mascotas\n";
+        cout << "4. Actualizar mascotas\n";
         cout << "5. Volver al Menú Principal\n";
         cout << "\nSeleccione una opción: ";
         cin >> opcion;
@@ -140,6 +140,7 @@ void menuMascotas() {
             	EliminarMascotas();
 				break;    
             case 4:
+            	ActualizarMascota();
                 break;
             case 5:
             	cout<<"Saliendo del programa.........";

@@ -4,5 +4,6 @@
 void RegistrarMascotas();
 void ListarMascotas();
 void EliminarMascotas();
+void ActualizarMascota();
 
 #endif
