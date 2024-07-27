@@ -164,6 +164,7 @@ int opcion;
 
         switch (opcion) {
             case 1:
+            	agregarHistoria();
                 break;
             case 2:
             	listarHistorias();

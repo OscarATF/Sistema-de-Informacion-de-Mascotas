@@ -19,4 +19,5 @@ extern int cantidadDeHistorias;
 
 extern Ventas ventas[capacidadMaxima];
 extern int cantidaddeventas;
+extern int c;
 #endif // VARIABLES_GLOBALES_H
