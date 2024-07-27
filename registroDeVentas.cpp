@@ -4,7 +4,7 @@
 #include "variablesGlobales.h"
 #include "inventario.h" // esto es para listar los productos
 
-void registrarVentas() {
+void registrarVentas() {	
 	system("cls");		
     if (cantidaddeventas >= capacidadMaxima) {
         cout << "No se pueden agregar más ventas, límite alcanzado.\n";
@@ -23,7 +23,10 @@ void registrarVentas() {
 	    cout << "\nIngrese el numero del producto: "; cin >> p.idproductoComprado;
     	cout << "Ingrese la cantidad de venta: "; cin >> p.cantidad;
     	cout << "Ingrese el precio de venta: "; cin >> p.precioDeVenta;
+    	productos[p.idproductoComprado-1].cantidad-=p.cantidad;
+
     	
+
     ventas[cantidaddeventas] = p;
     cantidaddeventas++;
     cout << "\nLa venta a sido registrada correctamente.\n\n";
