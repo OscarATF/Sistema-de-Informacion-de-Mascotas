@@ -2,6 +2,7 @@
 #include <iostream>
 #include "estructuras.h"
 #include "variablesGlobales.h"
+#include "registroDeVentas.h"
 
 //FUNCION REGISTRAR PRODUCTO
 void RegistrarProducto() {
