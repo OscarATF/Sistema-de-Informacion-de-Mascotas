@@ -194,6 +194,7 @@ void menuVentas(){
 
         switch (opcion) {
             case 1:
+            	registrarVentas();
                 break;
             case 2:
             	mostrarVentas();

@@ -2,5 +2,5 @@
 #define VENTAS_H
 
 void mostrarVentas();
-
+void registrarVentas();
 #endif
