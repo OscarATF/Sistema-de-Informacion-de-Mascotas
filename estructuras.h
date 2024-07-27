@@ -51,4 +51,6 @@ struct HistoriaClinica {
     string notasVeterinario;
     float facturacionPagos;
 };
-#endif // ESTRUCTURAS_H
+
+
+#endif

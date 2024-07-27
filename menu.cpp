@@ -6,6 +6,7 @@
 #include "Mascota.h"
 #include "inventario.h"
 #include "historia.h"
+#include "registroDeVentas.h"
 using namespace std;
 void Menu() {
     int op;
@@ -16,7 +17,8 @@ void Menu() {
         	<< "2. Gestión de Mascotas" << endl
         	<< "3. Gestion Inventario " << endl
         	<< "4. Historial clinico " << endl
-        	<< "5. Salir del programa" << endl;
+        	<< "5. Registro de Ventas " << endl
+        	<< "6. Salir del programa" << endl;
         cout << "\nDigite una opción: ";
         cin >> op;
         switch (op) {
@@ -31,14 +33,17 @@ void Menu() {
                 break;
             case 4:
             	menuHistorial();
-                break; 
-            case 5:
-            	cout<<"Saliendo del programa....";
+                break;
+			case 5:
+				menuVentas();
+				break; 
+            case 6:
+            	cout<<"\nSaliendo del programa....";
             	break;
     		default:
     			cout<<"Ingrese una opción correcta";
         }
-    } while (op != 5);
+    } while (op != 6);
 }
 //FIN DE FUNCION MENU
 
@@ -174,4 +179,31 @@ int opcion;
     } while (opcion != 4);
 }
 
+//MENU DE VENTAS 
+void menuVentas(){
+	int opcion;
+    do {
+    	system("cls");
+        cout << "\nRegistro de Ventas\n\n";
+        cout << "1. Agregar ventas\n";
+        cout << "2. Listar ventas\n";
+        cout << "3. Buscar ventas\n";
+        cout << "4. Volver al Menú Principal\n";
+        cout << "\nSeleccione una opción: ";
+        cin >> opcion;
 
+        switch (opcion) {
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+				break;    
+            case 4:
+            	break;
+            default:
+                cout << "Opción no válida, intente de nuevo.\n";
+                break;
+        }
+    } while (opcion != 4);
+}
