@@ -3,6 +3,9 @@
 #include "estructuras.h"
 #include "variablesGlobales.h"
 using namespace std;
+
+//Funcion  de Wesley Laura 2024-119046
+
 //Se añadió la funcion void registrar Mascotas
 void RegistrarMascotas() {
 system("cls");
