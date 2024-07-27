@@ -9,6 +9,7 @@ void menuHistorial();
 
 //Yair
 void menuInventario();
+void menuVentas();
 
 //wesley
 void menuMascotas();
