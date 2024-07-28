@@ -281,7 +281,8 @@ void menuReportes(){
         cout << "\n------------REPORTES DE VENTAS-----------\n\n";
         cout << "1. Venta mínima y máxima\n";
         cout << "2. Total de ventas\n";
-        cout << "3. Regresar al menú principal\n";
+        cout << "3. Total de ventas en historial clinico\n";
+        cout << "4. Regresar al menú principal\n";
         cout<<"\n";
         while (true) {
         cout << "Selecione una opción: "; cin >> opcion;
@@ -302,11 +303,14 @@ void menuReportes(){
             	ventaTotal();
                 break;
             case 3:
-				break;    
+            	ventaTotalHistorial();
+				break;
+			case 4:
+				break;     
             default:
                 cout<<"\nERROR";
     			sleep(1);
                 break;
         }
-    } while (opcion != 3);
+    } while (opcion != 4);
 }

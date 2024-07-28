@@ -75,11 +75,26 @@ void agregarActualizarHistoria() {
 	//continua con el registro del historial
 	cout<<"Nota del veterinario:"<<endl;
 	getline(cin,propietarios[indice].mascot.historial.notasVeterinario);
-	cout<<"\nPago efectuado:"<<endl;
-	cin>>propietarios[indice].mascot.historial.factura;
-	
-	system("pause");
-	cantidadDeHistorias++;
+	// Validar la edad de la mascota
+    while (true) {
+        cout<<"\nPago efectuado:"<<endl;
+		cin>>propietarios[indice].mascot.historial.factura;
+        if (cin.fail()) {
+            cin.clear(); // Limpiar el estado de error de std::cin
+            cin.ignore(10000, '\n'); // Descartar la entrada inválida
+            cout << "\nEntrada no válida. Por favor, ingrese un número.\n";
+            cout<<"\n";
+        } else {
+        	while (propietarios[indice].mascot.historial.factura<0) {
+        		cout<<"\nINVALIDO!! Porfavor ingrese un numero positivo:";
+				cin>>propietarios[indice].mascot.historial.factura;
+			}
+			cout<<"\nHistorial clinico agregado\n"<<endl;
+			system("pause");
+			cantidadDeHistorias++;
+            break;
+        }   
+    }
 }
 //FUNCION PARA IMPRIMIR UNA LISTA DE HISTORIALES
 void listarHistorias() {
@@ -102,6 +117,7 @@ void listarHistorias() {
         cout<<"\nNotas del Veterinario: " << propietarios[i].mascot.historial.notasVeterinario << endl;
         cout<<"\nPago efetuado: " << propietarios[i].mascot.historial.factura << endl<<endl;
         cout<<"---------------------------------" << endl;
+        
     }
     system("pause");
 }
