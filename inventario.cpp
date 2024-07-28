@@ -18,7 +18,7 @@ void RegistrarProducto() {
     system("cls"); //limpia la pantalla
     cout << "Ingrese nombre del producto: "; getline(cin, inv.nombreDelProducto);
     cout << "Ingrese cantidad: "; cin >> inv.cantidad;
-    cout << "Ingrese el precio:"; cin >> inv.precio;
+    cout << "Ingrese el precio: S/"; cin >> inv.precio;
     productos[cantidaddeproductos] = inv;
     cantidaddeproductos++;
     cout << "\nProducto agregado exitosamente.\n\n";
@@ -33,7 +33,7 @@ void mostrarInventario() {
 	        cout << "ID: " << productos[i].id_producto;
 			cout << "\nNombre: " << productos[i].nombreDelProducto;
 			cout << "\nCantidad:" << productos[i].cantidad;
-			cout << "\nPrecio: " << productos[i].precio<< "\n\n";
+			cout << "\nPrecio: S/" << productos[i].precio<< "\n\n";
 			cout << "----------------------------------------------\n";
 	}
     system("pause");
@@ -77,7 +77,7 @@ void actualizarInventario() {
 			cout<<"Producto "<<i+1<<" :\n"<<endl;
 			cout<<"Nombre: "<<productos[i].nombreDelProducto<<endl;
 			cout<<"Cantidad: "<<productos[i].cantidad<<endl;
-			cout<<"Precio: "<<productos[i].precio<<endl;
+			cout<<"Precio: S/"<<productos[i].precio<<endl;
 			cout<<endl;
 		}
 	cout<<"Digite el numero de producto que desea actualizar: ";
@@ -89,7 +89,7 @@ void actualizarInventario() {
 	cout<<"NOMBRE: "<<productos[indice].nombreDelProducto<<endl<<endl;
 	cout << "Ingrese la nueva cantidad: ";
     cin >> productos[indice].cantidad;
-	cout << "Ingrese el nuevo precio: ";
+	cout << "Ingrese el nuevo precio: S/";
     cin >> productos[indice].precio;
 	cout<<"\nLos nuevos datos del producto fueron actualizados\n"<<endl;
 	system("pause");

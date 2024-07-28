@@ -24,8 +24,7 @@ void registrarVentas() {
 	do{ 
 		cout << "Ingrese la fecha (DD/MM/YYYY): ";
 	    getline(cin, p.fecha);
-		cantidadCaracteres = p.fecha.length();
-		
+		cantidadCaracteres = p.fecha.length();	
 		//Esto valida que la fecha tenga / 
 		if (p.fecha[2]!= '/' || p.fecha[5]!= '/'){ 
 			cantidadCaracteres = 9; // se da 9 para volver al bucle
@@ -34,18 +33,22 @@ void registrarVentas() {
 			cout << "\nError fecha invalida, INGRESE DE NUEVO.\n\n";
 		}
 	}while(cantidadCaracteres != 10); //El bucle finaliza cuando cantidaCaracteres es 10.
-	
 	//continua con el registro de la venta
-	cout << "Ingrese el metodo de pago: ";
-	getline(cin, p.metodoDePago);
-	mostrarInventario();
-	cout << "\nIngrese el numero del producto: "; cin >> p.idproductoComprado;
-	p.datosdelproducto=productos[p.idproductoComprado-1];
+		cout << "Ingrese el metodo de pago: ";
+		getline(cin, p.metodoDePago);
+		mostrarInventario();
+	while(true){
+		cout << "\nIngrese el numero del producto: "; cin >> p.idproductoComprado;
+		p.datosdelproducto=productos[p.idproductoComprado-1];
+		//validacion de disponibilidad del producto
+		if(productos[p.idproductoComprado-1].cantidad == 0){	
+		    cout << "\n| Lo lamento, producto no disponible |\n\n";
+		    system("pause");
+		}else{		
+			break;
+		}		
+	}
 	
-	//validacion de disponibilidad del producto
-	if(productos[p.idproductoComprado-1].cantidad == 0){	
-	    cout << "\n| Lo lamento, producto no disponible |\n\n";
-	}else{	
 		cout << "Ingrese la cantidad de venta: "; cin >> p.cantidad;
 		
 		//validacion para la cantidad excesiva de productos
@@ -58,7 +61,7 @@ void registrarVentas() {
 		}else{
 			cout<<"\n ERROR - CANTIDAD EXCESIVA\n\n";
 		}
-	}    		
+	    		
 	system("pause");
 }
 
@@ -70,9 +73,9 @@ void mostrarVentas(){
         cout << "Venta " << ventas[i].id << "\t\tFecha: "<<ventas[i].fecha<<":\n\n";
         cout << "Cliente: " << ventas[i].nombreDelCliente << "\n";
         cout << "Producto: " << ventas[i].datosdelproducto.nombreDelProducto << "\n";
-		cout << "Precio del producto: "<< ventas[i].datosdelproducto.precio<< "\n";
+		cout << "Precio del producto: S/"<< ventas[i].datosdelproducto.precio<< "\n";
         cout << "Cantidad de compra: " << ventas[i].cantidad << "\n";
-        cout << "Precio cancelado: " << ventas[i].precioDeVenta << "\n";
+        cout << "Precio cancelado: S/" << ventas[i].precioDeVenta << "\n";
         cout << "Metodo de Pago: " << ventas[i].metodoDePago << "\n";
         cout << "-----------------------------------------\n";
     }
@@ -81,6 +84,7 @@ void mostrarVentas(){
 
 //BUSCAR VENTAS POR ID
 void buscarVentas(){
+	int cant=0;
 	int buscar;
 	system("cls");
 	cout<<"Digite el id la producto a buscar: "; cin>>buscar;
@@ -91,11 +95,15 @@ void buscarVentas(){
 			cout << "Venta " << ventas[i].id << "\t\tFecha: "<<ventas[i].fecha<<":\n\n";
         	cout << "Producto: " << ventas[i].idproductoComprado << "\n";
         	cout << "Cantidad: " << ventas[i].cantidad << "\n";
-        	cout << "Precio que fue vendido: " << ventas[i].precioDeVenta << "\n";
+        	cout << "Precio que fue vendido: S/" << ventas[i].precioDeVenta << "\n";
         	cout << "Cliente: " << ventas[i].nombreDelCliente << "\n";
         	cout << "Metodo de Pago: " << ventas[i].metodoDePago << "\n";
         	cout << "-----------------------------------------\n";
+        	cant++;
 		}
+	}
+	if(cant==0){
+		cout << "\tPRODUCTO NO ENCONTRADO\n\n";
 	}
 	system("pause");
 }

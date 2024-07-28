@@ -126,9 +126,17 @@ void menuInventario() {
         cout << "3. Eliminar Producto\n";
         cout << "4. Listar Productos\n";
         cout << "5. Volver al Menú Principal\n";
-        cout << "\nSeleccione una opción: ";
-        cin >> opcion;
-        
+        while(true){
+        cout << "\nSeleccione una opción: "; cin >> opcion;
+	        if (cin.fail()) {
+	            cin.clear(); // Limpiar el estado de error de std::cin
+	            cin.ignore(10000, '\n'); // Descartar la entrada inválida
+	            cout << "\nEntrada no válida. Por favor, ingrese un número.\n";
+	            cout<<"\n";
+	        } else {
+	            break;
+	        }
+		}        
         switch (opcion) {
             case 1:
             	RegistrarProducto();
@@ -247,7 +255,6 @@ void menuVentas(){
             cout << "\nEntrada no válida. Por favor, ingrese un número.\n";
             cout<<"\n";
         } else {
-            cin.ignore(10000, '\n'); // Descartar cualquier entrada adicional
             break;
         }
     }
