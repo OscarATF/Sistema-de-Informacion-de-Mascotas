@@ -11,11 +11,8 @@ void RegistrarMascotas() {
 system("cls");
     if (cantidadDeMascotas >= capacidadMaxima) {
         cout << "No se pueden agregar más productos, límite alcanzado.\n";
-        
         return;
     }
-
-
     mascota[cantidadDeMascotas].id_mascota++;
     cin.ignore();
     cout << "\nIngrese nombre de la mascota: "; getline(cin, mascota[cantidadDeMascotas].nombre);
@@ -33,7 +30,7 @@ void ListarMascotas(){
 	system("cls");
 	cout<<"\n---------Lista de mascotas---------\n";
 	for(int i=0;i<cantidadDeMascotas;i++){
-		cout<<"Mascota "<<mascota[i].id_mascota<<":\n\n";
+		cout<<"Mascota "<<i+1<<":\n\n";
 		cout<<"Nombre: "<<mascota[i].nombre<<"\n";
 		cout<<"Edad: "<<mascota[i].edad<<"\n";
 		cout<<"Especie: "<<mascota[i].especie<<"\n";

@@ -33,16 +33,16 @@ Inventario productos[capacidadMaxima] ={
 };
 //Agregando datos establecidos de la estructura de mascotas
 Mascota mascota[capacidadMaxima] = {
-    {0, "BOBY", "Perro", "Bulldog", 3},
-    {1, "RUFO", "Hámster","Rata",1},
-    {2, "HARRY", "Gato","Siamés",3},
-    {3, "PIPO", "Perro","Labrador retriever",2},
-    {4, "SAM", "Perro","Chihuahua",3},
-    {5, "DOKI", "Perro","Rottweiler", 2},
-    {6, "CALVIN", "Perro","Chihuahueño",3},
-    {7, "RAMBO", "Perro","Pastor alemán",5},
-    {8, "RAU", "Perro","Dóberman",6},
-    {9, "LUA", "Perro","Shih Tzu", 1}
+    {1, "BOBY", "Perro", "Bulldog", 3},
+    {2, "RUFO", "Hámster","Rata",1},
+    {3, "HARRY", "Gato","Siamés",3},
+    {4, "PIPO", "Perro","Labrador retriever",2},
+    {5, "SAM", "Perro","Chihuahua",3},
+    {6, "DOKI", "Perro","Rottweiler", 2},
+    {7, "CALVIN", "Perro","Chihuahueño",3},
+    {8, "RAMBO", "Perro","Pastor alemán",5},
+    {9, "RAU", "Perro","Dóberman",6},
+    {10, "LUA", "Perro","Shih Tzu", 1}
 };
 Propietario propietarios[capacidadMaxima] = {
     {0, "Juan Perez", "912345678", mascota[0]},
