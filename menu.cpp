@@ -54,10 +54,10 @@ void Menu() {
             	menuPropietario();
                 break;
             case 3:
-            	menuInventario();
+            	menuHistorial();
                 break;
             case 4:
-            	menuHistorial();
+            	menuInventario();
                 break;
 			case 5:
 				menuVentas();
@@ -183,10 +183,10 @@ void menuMascotas() {
             	ListarMascotas();
                 break;
             case 3:
-            	EliminarMascotas();
+            	ActualizarMascota();
 				break;    
             case 4:
-            	ActualizarMascota();
+            	EliminarMascotas();
                 break;
             case 5:
             	cout<<"Saliendo del programa.........";

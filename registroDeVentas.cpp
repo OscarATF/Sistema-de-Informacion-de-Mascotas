@@ -86,7 +86,7 @@ void buscarVentas(){
 	cout<<"Digite el id la producto a buscar: "; cin>>buscar;
 	cout<<"\nLISTA DE PRODUCTOS CON EL ID "<<buscar<<":"<<endl;
 	cout << "-----------------------------------------\n";
-	for(int i=1;i<cantidaddeventas;i++){
+	for(int i=0;i<cantidaddeventas;i++){
 		if(ventas[i].idproductoComprado==buscar){
 			cout << "Venta " << ventas[i].id << "\t\tFecha: "<<ventas[i].fecha<<":\n\n";
         	cout << "Producto: " << ventas[i].idproductoComprado << "\n";
