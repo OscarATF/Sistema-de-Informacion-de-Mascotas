@@ -23,10 +23,10 @@ void Menu() {
         cout << "1. Gestión de Mascotas" << endl;
         SetConsoleTextAttribute(hConsole, 9);
         cout << "2. Gestion de Propietario" << endl;
-        SetConsoleTextAttribute(hConsole, 10);
-        cout << "3. Gestion Inventario " << endl;
         SetConsoleTextAttribute(hConsole, 3);
-        cout << "4. Historial clinico " << endl;
+        cout << "3. Historial clínico " << endl;
+        SetConsoleTextAttribute(hConsole, 10);
+        cout << "4. Gestión de inventario " << endl;
         SetConsoleTextAttribute(hConsole, 6);
         cout << "5. Registro de Ventas " << endl;
         SetConsoleTextAttribute(hConsole, 12);//color de fuente rojo claro
@@ -158,8 +158,8 @@ void menuMascotas() {
         cout << "\nGestión de mascotas\n\n";
         cout << "1. Agregar Mascota\n";
         cout << "2. Listar mascotas\n";
-        cout << "3. Eliminar mascotas\n";
-        cout << "4. Actualizar mascotas\n";
+        cout << "3. Actualizar mascota\n";
+        cout << "4. Eliminar mascota\n";
         cout << "5. Volver al Menú Principal\n";
 		cout<<"\n";
         while (true) {
