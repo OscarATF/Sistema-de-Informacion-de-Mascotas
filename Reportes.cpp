@@ -9,6 +9,7 @@
 #include "Mascota.h"
 
 using namespace std;
+
 //Wesley Laura 2024-119046
 //Funcion de ventas mínima y máxima
 
@@ -27,9 +28,11 @@ void minmax(){
 			menor=ventas[i].precioDeVenta;
 		}		
 	}
+	cout<<"\n----------REPORTE DE LAS VENTAS DE LA VETERINARIA--------\n\n";
 	cout<<" Venta mínima: "<<menor<<endl;
+	cout<<"\n";
 	cout<<" Venta máxima: "<<mayor<<endl;
-	
+	cout<<"\n";
 	system("pause");
 }
 		
@@ -43,7 +46,9 @@ void ventaTotal(){
 		for(int i=0;i<cantidaddeventas;i++){
 		ventatotal=ventatotal+ventas[i].precioDeVenta;
 	}
+	cout<<"\n----------REPORTE DE LAS VENTAS DE LA VETERINARIA--------\n\n";
 	cout<<"\n";
 	cout<<"Venta total de los productos: "<<ventatotal<<endl;
+	cout<<"\n";
 	system("pause");
 }
