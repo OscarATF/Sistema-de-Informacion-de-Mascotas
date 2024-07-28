@@ -7,7 +7,7 @@
 
 using namespace std;
 
-void agregarHistoria() {
+void agregarActualizarHistoria() {
 	int id;
 	int indice;
 	int selec;
@@ -24,7 +24,7 @@ void agregarHistoria() {
 	system("cls");
 	cout<<"Nombre: "<<propietarios[indice].nombreCompleto<<endl;
 	cout<<"Nombre de la Mascota: "<<propietarios[indice].mascot.nombre<<endl;
-	cout<<"\nNuevo Historial clinico\n";
+	cout<<"\nHistorial clinico\n";
 	cout<<"\nANTECEDENTES MEDICOS\n"<<endl
 		<<"Enfermedades previas:"<<endl;
 	cin.ignore();
@@ -73,44 +73,6 @@ void listarHistorias() {
     system("pause");
 }
 
-void actualizarHistoria() {
-	int indice;
-	int historial;
-	system("cls");
-	cout<<"Actualizar Historial clinico";
-		cout<<"\n---------Lista de Historial---------\n";
-	for(int i=0;i<cantidaddepropietarios;i++){
-		cout <<"PROPIETARIO "<< i + 1 << ":" << endl;
-		cout <<"\nPropietario: "<<propietarios[i].nombreCompleto<< ", "  
-             <<propietarios[i].contacto<< endl;
-        cout <<"Mascota: "<< propietarios[i].mascot.nombre<<endl<<endl;
-        cout<<"---------------------------------" << endl;
-	}
-cout<<"Digite el numero de propietario al cual desea actualizar el historial clinico de su mascota: ";
-	cin>>historial;
-	indice=historial-1;
-	cout<<"\nANTECEDENTES MEDICOS\n"<<endl
-		<<"Enfermedades previas:"<<endl;
-	cin.ignore();
-	getline(cin,propietarios[indice].mascot.historial.antecedentes.enfermedadesPrevias);
-	cout<<"\nCirugias Pasadas:"<<endl;
-	getline(cin,propietarios[indice].mascot.historial.antecedentes.cirugiasPasadas);
-	cout<<"\nAlergias conocidas:"<<endl;
-	getline(cin,propietarios[indice].mascot.historial.antecedentes.alergiasConocidas);
-	cout<<"\nVacunaciones:"<<endl;
-	getline(cin,propietarios[indice].mascot.historial.antecedentes.vacunaciones);
-	cout<<"\nMotivo de visita:"<<endl;
-	getline(cin,propietarios[indice].mascot.historial.motivoVisita.motivo);
-	cout<<"\nSintomas:"<<endl;
-	getline(cin,propietarios[indice].mascot.historial.motivoVisita.sintomas);
-	cout<<"\nPLAN DE SEGUIMIENTO\n"<<endl
-		<<"\nRecomendaciones: "<<endl;
-	getline(cin,propietarios[indice].mascot.historial.planSeguimiento.recomendaciones);
-	cout<<"\nProxima cita: "<<endl;
-	getline(cin,propietarios[indice].mascot.historial.planSeguimiento.proximaCita);
-	cout<<"\nNota del veterinario:"<<endl;
-	getline(cin,propietarios[indice].mascot.historial.notasVeterinario);
-	system("pause");
-}
+
 
 

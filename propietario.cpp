@@ -16,6 +16,7 @@ void RegistrarPropietario() {
 	    cout << "Ingrese nombre completo: ";
 	    cin.ignore();
 	    getline(cin, propietarios[cantidaddepropietarios].nombreCompleto);
+	    (propietarios[cantidaddepropietarios].nombreCompleto)[0]=toupper((propietarios[cantidaddepropietarios].nombreCompleto)[0]);
 	    cout << "Ingrese contacto: ";
 	    getline(cin, propietarios[cantidaddepropietarios].contacto);
 	 	cout << "Seleccione la mascota para el propietario:\n";
@@ -107,3 +108,31 @@ void actualizarPropietario() {
 	system("pause");
 }
 //FIN DE FUNCION ACTUALIZAR PROPIETARIO 
+void ordenAlfabetico() {
+	system("cls");
+	Propietario orden[cantidaddepropietarios];
+	Propietario aux;
+		//genera una copia para no afectar el arreglo original
+		for (int i=0;i<cantidaddepropietarios;i++) {
+        	orden[i] = propietarios[i];
+    	}
+    	
+	for (int i=0;i<cantidaddepropietarios-1;i++) {
+		for (int j=i+1;j<cantidaddepropietarios;j++) {
+			if (orden[i].nombreCompleto>orden[j].nombreCompleto) {
+				aux=orden[i];
+				orden[i]=orden[j];
+				orden[j]=aux;			
+			}
+		}
+	}
+	cout << "\n--- Lista de Propietarios ordenados alfabeticamente ---\n";
+	for (int i=0;i<cantidaddepropietarios;i++) {
+		cout << "Propietario " << i+1 << ":\n";
+        cout << "Nombre Completo: " <<orden[i].nombreCompleto << "\n";
+        cout << "Contacto: " << orden[i].contacto << "\n";
+        cout <<"Nombre de mascota: "<<orden[i].mascot.nombre<<endl;
+		cout << "-----------------------------\n";
+		}
+	system("pause");
+}

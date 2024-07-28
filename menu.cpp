@@ -61,9 +61,10 @@ void menuPropietario() {
         cout << "\nGestión de Propietarios\n\n";
         cout << "1. Agregar Propietario\n";
         cout << "2. Listar Propietarios\n";
-        cout << "3. Eliminar Propietario\n";
-        cout << "4. Actualizar Propietario\n";
-        cout << "5. Volver al Menú Principal\n";
+        cout << "3. Listar Propietarios en orden alfabetico\n";
+        cout << "4. Eliminar Propietario\n";
+        cout << "5. Actualizar Propietario\n";
+        cout << "6. Volver al Menú Principal\n";
         cout << "Seleccione una opción: ";
         cin >> opcion;
         switch (opcion) {
@@ -74,18 +75,21 @@ void menuPropietario() {
                 listaDePropietarios();
                 break;
             case 3:
+            	ordenAlfabetico();
+            	break;
+            case 4:
 				eliminarPropietario();
                 break;
-            case 4:
+            case 5:
                 actualizarPropietario();
                 break;
-            case 5:
+            case 6:
                 cout << "Volviendo al Menú Principal...\n";
                 break;
             default:
                 cout << "Opción no válida, intente de nuevo.\n";
         }
-    } while (opcion != 5);
+    } while (opcion != 6);
 }
 // Funcion de menu de gestion de inventario.   DANNY YAIR LUQUE PARI 2024-119013 <----------------------
 void menuInventario() {
@@ -163,30 +167,27 @@ int opcion;
     do {
     	system("cls");
         cout << "\nHistorial clinico\n\n";
-        cout << "1. Agregar historial clinico\n";
+        cout << "1. Agregar o actualziar historial clinico\n";
         cout << "2. Listar historiales clinicos\n";
-        cout << "3. Actualizar historial clinico\n";
-        cout << "4. Volver al Menú Principal\n";
+        cout << "3. Volver al Menú Principal\n";
         cout << "\nSeleccione una opción: ";
         cin >> opcion;
 
         switch (opcion) {
             case 1:
-            	agregarHistoria();
+            	agregarActualizarHistoria();
                 break;
             case 2:
             	listarHistorias();
                 break;
             case 3:
-            	actualizarHistoria();
+            	cout<<"\nVolviendo al menu principal\n";
 				break;    
-            case 4:
-            	break;
             default:
                 cout << "Opción no válida, intente de nuevo.\n";
                 break;
         }
-    } while (opcion != 4);
+    } while (opcion != 3);
 }
 
 //Menu de registro de ventas 
