@@ -18,6 +18,7 @@ void Menu() {
     do {
         system("cls");
         cout << "\nSistema de gestión veterinaria\n\n";
+        SetConsoleTextAttribute(hConsole,13);// color de fuente púrpura claro
         cout << "1. Gestión de Mascotas" << endl;
         cout << "2. Gestion de Propietario" << endl;
         SetConsoleTextAttribute(hConsole, 10);
@@ -26,8 +27,9 @@ void Menu() {
         cout << "4. Historial clinico " << endl;
         SetConsoleTextAttribute(hConsole, 6);
         cout << "5. Registro de Ventas " << endl;
-        SetConsoleTextAttribute(hConsole, 7);
+        SetConsoleTextAttribute(hConsole, 12);//color de fuente rojo claro
         cout << "6. Reportes de las ventas " << endl;
+         SetConsoleTextAttribute(hConsole, 7);//color blanco
         cout << "7. Salir del programa" << endl;
         cout << "\nDigite una opción: ";
         cin >> op;
@@ -138,6 +140,7 @@ void menuMascotas() {
     int opcion;
     do {
     	system("cls");
+    	 SetConsoleTextAttribute(hConsole,13);// color de fuente púrpura claro
         cout << "\nGestión de mascotas\n\n";
         cout << "1. Agregar Mascota\n";
         cout << "2. Listar mascotas\n";
@@ -238,6 +241,7 @@ void menuReportes(){
 	int opcion;
     do {
     	system("cls");
+    	SetConsoleTextAttribute(hConsole, 12);//color de fuente rojo claro
         cout << "\n------------REPORTES DE VENTAS-----------\n\n";
         cout << "1. Venta mínima y máxima\n";
         cout << "2. Total de ventas\n";
