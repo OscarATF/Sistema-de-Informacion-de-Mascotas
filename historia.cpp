@@ -8,27 +8,34 @@
 using namespace std;
 
 void agregarHistoria() {
-	if (cantidadDeMascotas<=10) {
-		cout<<"Ingrese antes una mascota y un propietario"<<endl;
-		system("pause");
-		return;
-	} else {
 	int id;
 	int indice;
+	int selec;
 	system("cls");
-	cout<<"Nuevo Historial clinico";
-	cout<<"\nNombre de la mascota: "<<mascota[cantidadDeMascotas].nombre;
+	for (int i=0;i<cantidadDeMascotas;i++) {
+		cout<<"Propietario "<<i+1<<":\n";
+		cout<<"Nombre: "<<propietarios[i].nombreCompleto<<"\n";
+	}
+	cout<<"Seleccione el propietario de la mascota: "<<endl;
+	cin>>selec;
+	indice=selec-1;
+	cout<<"Propietario "<<selec<<" seleccionado"<<endl;
+	system("pause");
+	system("cls");
+	cout<<"Nombre: "<<propietarios[indice].nombreCompleto<<endl;
+	cout<<"Nombre de la Mascota: "<<propietarios[indice].mascot.nombre<<endl;
+	cout<<"\nNuevo Historial clinico\n";
 	cout<<"\nAntecedentes Medicos"<<endl
 		<<"Enfermedades previas:"<<endl;
-	cin>>historias[cantidadDeHistorias].antecedentes.enfermedadesPrevias;
+	cin>>historias[indice].antecedentes.enfermedadesPrevias;
 	cout<<"\nCirugias Pasadas:"<<endl;
-	cin>>historias[cantidadDeHistorias].antecedentes.cirugiasPasadas;
+	cin>>historias[indice].antecedentes.cirugiasPasadas;
 	cout<<"\nAlergias conocidas:"<<endl;
-	cin>>historias[cantidadDeHistorias].antecedentes.alergiasConocidas;
+	cin>>historias[indice].antecedentes.alergiasConocidas;
 	cout<<"\nVacunaciones:"<<endl;
-	cin>>historias[cantidadDeHistorias].antecedentes.vacunaciones;
+	cin>>historias[indice].antecedentes.vacunaciones;
 	cout<<"\nMotivo de visita:"<<endl;
-	cin>>historias[cantidadDeHistorias].motivoVisita.motivo;
+	cin>>historias[indice].motivoVisita.motivo;
 	cout<<"\nSintomas:"<<endl;
 	cin>>historias[cantidadDeHistorias].motivoVisita.sintomas;
 	cout<<"\nPlan de seguimiento"<<endl
@@ -40,7 +47,6 @@ void agregarHistoria() {
 	cin>>historias[cantidadDeHistorias].notasVeterinario;
 	system("pause");
 	cantidadDeHistorias++;
-	}
 }
 
 void listarHistorias() {
@@ -49,7 +55,7 @@ void listarHistorias() {
         cout << "Historia Clinica " << i + 1 << ":" << endl;
         cout << "Propietario: " << propietarios[i].nombreCompleto << ", "  
              << propietarios[i].contacto << endl;
-        cout << "Mascota: " << mascota[i].nombre<<endl;
+        cout << "Mascota: " << propietarios[i].mascot.nombre<<endl;
         cout << "Antecedentes Médicos "
 			<<"Enfermedades previas:\n "<<historias[i].antecedentes.enfermedadesPrevias <<endl 
             <<"Cirugias pasadas:\n" << historias[i].antecedentes.cirugiasPasadas <<endl
@@ -71,34 +77,37 @@ void actualizarHistoria() {
 	int historial;
 	system("cls");
 	cout<<"Actualizar Historial clinico";
-		cout<<"\n---------Lista de mascotas---------\n";
-	for(int i=0;i<cantidadDeMascotas;i++){
-		cout<<"Mascota "<<i+1<<":\n\n";
-		cout<<"Nombre: "<<mascota[i].nombre<<"\n";
+		cout<<"\n---------Lista de Historial---------\n";
+	for(int i=0;i<cantidadDeHistorias;i++){
+		cout << "Historia Clinica " << i + 1 << ":" << endl;
+		cout << "Propietario: " << propietarios[i].nombreCompleto << ", "  
+             << propietarios[i].contacto << endl;
+        cout << "Mascota: " << propietarios[i].mascot.nombre<<endl<<endl;
 }
-cout<<"Digite el numero de mascota que desea actualizar el historial: ";
+cout<<"Digite el numero de historia que desea actualizar: ";
 	cin>>historial;
 	indice=historial-1;
-	cout<<"\nAntecedentes Medicos"<<endl
+	cout<<"\nAntecedentes Medicos\n"<<endl
 		<<"Enfermedades previas:"<<endl;
-	cin>>historias[indice].antecedentes.enfermedadesPrevias;
+	cin.ignore();
+	getline(cin,historias[indice].antecedentes.enfermedadesPrevias);
 	cout<<"\nCirugias Pasadas:"<<endl;
-	cin>>historias[indice].antecedentes.cirugiasPasadas;
+	getline(cin,historias[indice].antecedentes.cirugiasPasadas);
 	cout<<"\nAlergias conocidas:"<<endl;
-	cin>>historias[indice].antecedentes.alergiasConocidas;
+	getline(cin,historias[indice].antecedentes.alergiasConocidas);
 	cout<<"\nVacunaciones:"<<endl;
-	cin>>historias[indice].antecedentes.vacunaciones;
+	getline(cin,historias[indice].antecedentes.vacunaciones);
 	cout<<"\nMotivo de visita:"<<endl;
-	cin>>historias[indice].motivoVisita.motivo;
+	getline(cin,historias[indice].motivoVisita.motivo);
 	cout<<"\nSintomas:"<<endl;
-	cin>>historias[indice].motivoVisita.sintomas;
+	getline(cin,historias[indice].motivoVisita.sintomas);
 	cout<<"\nPlan de seguimiento"<<endl
 		<<"Recomendaciones:"<<endl;
-	cin>>historias[indice].planSeguimiento.recomendaciones;
+	getline(cin,historias[indice].planSeguimiento.recomendaciones);
 	cout<<"Proxima cita:"<<endl;
-	cin>>historias[indice].planSeguimiento.proximaCita;
+	getline(cin,historias[indice].planSeguimiento.proximaCita);
 	cout<<"Nota del veterinario:"<<endl;
-	cin>>historias[indice].notasVeterinario;
+	getline(cin,historias[indice].notasVeterinario);
 	system("pause");
 }
 

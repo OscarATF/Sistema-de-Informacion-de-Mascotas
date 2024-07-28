@@ -45,16 +45,16 @@ Mascota mascota[capacidadMaxima] = {
     {9, "LUA", "Perro","Shih Tzu", 1}
 };
 Propietario propietarios[capacidadMaxima] = {
-    {0, "Juan Perez", "912345678", mascota[0].id_mascota},
-    {1, "Maria Garcia", "923456789", mascota[1].id_mascota},
-    {2, "Carlos Sanchez", "934567890", mascota[2].id_mascota},
-    {3, "Ana Martinez", "945678901", mascota[3].id_mascota},
-    {4, "Luis Gomez", "956789012", mascota[4].id_mascota},
-    {5, "Laura Diaz", "967890123", mascota[5].id_mascota},
-    {6, "Pedro Rodriguez", "978901234", mascota[6].id_mascota},
-    {7, "Sofia Lopez", "989012345", mascota[7].id_mascota},
-    {8, "Diego Fernandez", "990123456", mascota[8].id_mascota},
-    {9, "Marta Jimenez", "901234567", mascota[9].id_mascota}
+    {0, "Juan Perez", "912345678", mascota[0]},
+    {1, "Maria Garcia", "923456789", mascota[1]},
+    {2, "Carlos Sanchez", "934567890", mascota[2]},
+    {3, "Ana Martinez", "945678901", mascota[3]},
+    {4, "Luis Gomez", "956789012", mascota[4]},
+    {5, "Laura Diaz", "967890123", mascota[5]},
+    {6, "Pedro Rodriguez", "978901234", mascota[6]},
+    {7, "Sofia Lopez", "989012345", mascota[7]},
+    {8, "Diego Fernandez", "990123456", mascota[8]},
+    {9, "Marta Jimenez", "901234567", mascota[9]}
 };
 
 HistoriaClinica historias[capacidadMaxima] = {

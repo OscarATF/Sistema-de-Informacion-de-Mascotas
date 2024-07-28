@@ -5,11 +5,19 @@
 
 using namespace std;
 
+struct Mascota{
+	int id_mascota;
+	string nombre;
+	string especie;
+	string raza;
+	int edad;
+};
+
 struct Propietario {
     int id;
     string nombreCompleto;
     string contacto;
-    int id_Mascota;
+    Mascota mascot;
 };
 
 struct Inventario {
@@ -17,14 +25,6 @@ struct Inventario {
     string nombreDelProducto;
     float precio;
     int cantidad;
-};
-
-struct Mascota{
-	int id_mascota;
-	string nombre;
-	string especie;
-	string raza;
-	int edad;
 };
 
 struct AntecedentesMedicos {
