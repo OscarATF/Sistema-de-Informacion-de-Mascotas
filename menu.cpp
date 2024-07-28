@@ -13,8 +13,8 @@ void Menu() {
     do {
         system("cls");
         cout << "\nSistema de gestión veterinaria\n\n";
-        cout << "1. Gestion de Propietario" << endl
-        	<< "2. Gestión de Mascotas" << endl
+        cout << "1. Gestión de Mascotas" << endl
+        	<< "2. Gestion de Propietario" << endl
         	<< "3. Gestion Inventario " << endl
         	<< "4. Historial clinico " << endl
         	<< "5. Registro de Ventas " << endl
@@ -23,10 +23,10 @@ void Menu() {
         cin >> op;
         switch (op) {
             case 1:
-                menuPropietario();
+                menuMascotas();
                 break;
             case 2:
-            	menuMascotas();
+            	menuPropietario();
                 break;
             case 3:
             	menuInventario();
@@ -124,7 +124,7 @@ void menuMascotas() {
         cout << "1. Agregar Mascota\n";
         cout << "2. Listar mascotas\n";
         cout << "3. Eliminar mascotas\n";
-        cout << "4. Actualizar número de mascotas\n";
+        cout << "4. Actualizar mascotas\n";
         cout << "5. Volver al Menú Principal\n";
         cout << "\nSeleccione una opción: ";
         cin >> opcion;
@@ -140,6 +140,7 @@ void menuMascotas() {
             	EliminarMascotas();
 				break;    
             case 4:
+            	ActualizarMascota();
                 break;
             case 5:
             	cout<<"Saliendo del programa.........";
