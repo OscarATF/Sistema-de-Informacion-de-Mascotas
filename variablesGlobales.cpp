@@ -1,4 +1,13 @@
 #include "variablesGlobales.h"
+
+
+#include "registroDeVentas.h"
+int cantidaddepropietarios = 10;
+int cantidaddeproductos = 20; // cantidad de productos del inventario.
+int cantidadDeMascotas=10;
+int cantidadDeHistorias=10;
+int cantidaddeventas=4;	
+
 Inventario productos[capacidadMaxima] ={
     {1, "Croquetas Pedigree Adulto", 20.00, 50},
     {2, "Alimento húmedo Cesar", 1.50, 200},
@@ -19,7 +28,8 @@ Inventario productos[capacidadMaxima] ={
     {17, "Suplementos vitamínicos", 20.00, 60},
     {18, "Antiparasitarios Frontline", 30.00, 40},
     {19, "Cepillo dental y pasta", 10.00, 90},
-    {20, "Botiquín de primeros auxilios", 25.00, 30}
+    {20, "Botiquín de primeros auxilios", 25.00,30}
+
 };
 //Agregando datos establecidos de la estructura de mascotas
 Mascota mascota[capacidadMaxima] = {
@@ -119,8 +129,3 @@ Ventas ventas[capacidadMaxima] = {
 
 
 
-int cantidaddepropietarios = 10;
-int cantidaddeproductos = 20; // cantidad de productos del inventario.
-int cantidadDeMascotas=10;
-int cantidadDeHistorias=10;
-int cantidaddeventas=4;
