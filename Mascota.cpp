@@ -43,6 +43,7 @@ system("cls");
 void ListarMascotas(){
 	system("cls");
 	cout<<"\n---------Lista de mascotas---------\n";
+	cout<<"\n";
 	for(int i=0;i<cantidadDeMascotas;i++){
 		cout<<"Mascota "<<i+1<<":\n\n";
 		cout<<"Nombre: "<<mascota[i].nombre<<"\n";
