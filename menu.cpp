@@ -34,8 +34,18 @@ void Menu() {
         cout << "6. Reportes de las ventas " << endl;
          SetConsoleTextAttribute(hConsole, 7);//color blanco
         cout << "7. Salir del programa" << endl;
-        cout << "\nDigite una opción: ";
-        cin >> op;
+        cout<<"\n";
+       while (true) {
+        cout << "Selecione una opción: "; cin >> op;
+        if (cin.fail()) {
+            cin.clear(); // Limpiar el estado de error de std::cin
+            cin.ignore(10000, '\n'); // Descartar la entrada inválida
+            cout << "\nEntrada no válida. Por favor, ingrese un número.\n";
+            cout<<"\n";
+        } else {
+            break;
+        }
+    }
         switch (op) {
             case 1:
                 menuMascotas();
@@ -59,7 +69,8 @@ void Menu() {
             	cout<<"\nSaliendo del programa....";
             	break;
     		default:
-    			cout<<"Ingrese una opción correcta";
+    			cout<<"ERROR\n";
+    			system("pause");
         }
     } while (op != 7);
 }
@@ -151,8 +162,18 @@ void menuMascotas() {
         cout << "3. Eliminar mascotas\n";
         cout << "4. Actualizar mascotas\n";
         cout << "5. Volver al Menú Principal\n";
-        cout << "\nSeleccione una opción: ";
-        cin >> opcion;
+		cout<<"\n";
+        while (true) {
+        cout << "Selecione una opción: "; cin >> opcion;
+        if (cin.fail()) {
+            cin.clear(); // Limpiar el estado de error de std::cin
+            cin.ignore(10000, '\n'); // Descartar la entrada inválida
+            cout << "\nEntrada no válida. Por favor, ingrese un número.\n";
+            cout<<"\n";
+        } else {
+            break;
+        }
+    }
 
         switch (opcion) {
             case 1:
@@ -171,7 +192,8 @@ void menuMascotas() {
             	cout<<"Saliendo del programa.........";
             	break;
             default:
-                cout << "Opción no válida, intente de nuevo.\n";
+                cout <<"\nERROR";
+                sleep(1);
                 break;
         }
     } while (opcion != 5);
@@ -217,9 +239,18 @@ void menuVentas(){
         cout << "2. Listar ventas\n";
         cout << "3. Buscar ventas\n";
         cout << "4. Volver al Menú Principal\n";
-        cout << "\nSeleccione una opción: ";
-        cin >> opcion;
-
+        while (true) {
+        cout << "Selecione una opción: "; cin >> opcion;
+        if (cin.fail()) {
+            cin.clear(); // Limpiar el estado de error de std::cin
+            cin.ignore(10000, '\n'); // Descartar la entrada inválida
+            cout << "\nEntrada no válida. Por favor, ingrese un número.\n";
+            cout<<"\n";
+        } else {
+            cin.ignore(10000, '\n'); // Descartar cualquier entrada adicional
+            break;
+        }
+    }
         switch (opcion) {
             case 1:
             	registrarVentas();
@@ -251,8 +282,18 @@ void menuReportes(){
         cout << "1. Venta mínima y máxima\n";
         cout << "2. Total de ventas\n";
         cout << "3. Regresar al menú principal\n";
-        cout << "\nSeleccione una opción:  ";
-        cin >> opcion;
+        cout<<"\n";
+        while (true) {
+        cout << "Selecione una opción: "; cin >> opcion;
+        if (cin.fail()) {
+            cin.clear(); // Limpiar el estado de error de std::cin
+            cin.ignore(10000, '\n'); // Descartar la entrada inválida
+            cout << "\nEntrada no válida. Por favor, ingrese un número.\n";
+            cout<<"\n";
+        } else {
+            break;
+        }
+    }
         switch (opcion) {
             case 1:
             	minmax();
@@ -263,7 +304,8 @@ void menuReportes(){
             case 3:
 				break;    
             default:
-                cout << "Opción no válida, intente de nuevo.\n";
+                cout<<"\nERROR";
+    			sleep(1);
                 break;
         }
     } while (opcion != 3);
