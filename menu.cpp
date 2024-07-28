@@ -18,7 +18,8 @@ void Menu() {
         	<< "3. Gestion Inventario " << endl
         	<< "4. Historial clinico " << endl
         	<< "5. Registro de Ventas " << endl
-        	<< "6. Salir del programa" << endl;
+        	<< "6. Reportes de las ventas " << endl
+        	<< "7. Salir del programa" << endl;
         cout << "\nDigite una opción: ";
         cin >> op;
         switch (op) {
@@ -36,14 +37,17 @@ void Menu() {
                 break;
 			case 5:
 				menuVentas();
+				break;
+			case 6:
+				menuReportes();
 				break; 
-            case 6:
+            case 7:
             	cout<<"\nSaliendo del programa....";
             	break;
     		default:
     			cout<<"Ingrese una opción correcta";
         }
-    } while (op != 6);
+    } while (op != 7);
 }
 //FIN DE FUNCION MENU
 
@@ -213,4 +217,31 @@ void menuVentas(){
                 break;
         }
     } while (opcion != 4);
+}
+
+//Wesley Laura 2024-119046
+
+//MENU DE REPORTE DE VENTAS
+void menuReportes(){
+	int opcion;
+    do {
+    	system("cls");
+        cout << "\n------------REPORTES DE VENTAS-----------\n\n";
+        cout << "1. Venta mínima y máxima\n";
+        cout << "2. Total de ventas\n";
+        cout << "3. Regresar al menú principal\n";
+        cout << "\nSeleccione una opción:  ";
+        cin >> opcion;
+        switch (opcion) {
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+				break;    
+            default:
+                cout << "Opción no válida, intente de nuevo.\n";
+                break;
+        }
+    } while (opcion != 3);
 }
