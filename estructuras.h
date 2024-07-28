@@ -58,7 +58,8 @@ struct Ventas {
     string nombreDelCliente; 
     string metodoDePago;
     int idproductoComprado;
-	string fecha;            
+	string fecha;
+	Inventario datosdelproducto;            
 };
 
 #endif

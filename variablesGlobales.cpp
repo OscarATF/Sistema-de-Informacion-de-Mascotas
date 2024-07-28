@@ -121,11 +121,10 @@ HistoriaClinica historias[capacidadMaxima] = {
     };
 
 Ventas ventas[capacidadMaxima] = {
-    {1, 10, productos[1].precio * 10, "Pedro Martinez", "Pago en efectivo",1,"10/07/2024"},
-    {2, 15, productos[2].precio * 15, "Ana Lopez", "Tarjeta de crédito",3,"10/07/2024"},
-    {3, 8, productos[3].precio * 8, "Carlos Ruiz", "Transferencia bancaria",4,"11/07/2024"},
-    {4, 5, productos[4].precio * 5, "Laura Sanchez", "Pago en efectivo",20,"11/07/2024"}
+    {1, 10, 200, "Pedro Martinez", "Pago en efectivo",1,"10/07/2024",productos[0]},
+    {2, 15,22.5, "Ana Lopez", "Tarjeta de crédito",2,"10/07/2024",productos[1]},
+    {3, 8, 64, "Carlos Ruiz", "Transferencia bancaria",3,"11/07/2024",productos[2]},
+    {4, 5, 125, "Laura Sanchez", "Pago en efectivo",4,"11/07/2024",productos[3]}
+//  id,cantidad,precioDeVenta,nombreDelCliente,metodoDePago,idproductoComprado,fecha
 };
-
-
 
