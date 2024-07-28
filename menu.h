@@ -13,5 +13,5 @@ void menuVentas();
 
 //wesley
 void menuMascotas();
-
+void menuReportes();
 #endif // MENU_H
