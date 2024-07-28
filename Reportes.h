@@ -3,5 +3,6 @@
 
 void minmax();
 void ventaTotal();
+void ventaTotalHistorial();
 
 #endif

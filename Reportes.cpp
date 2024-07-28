@@ -29,9 +29,9 @@ void minmax(){
 		}		
 	}
 	cout<<"\n----------REPORTE DE LAS VENTAS DE LA VETERINARIA--------\n\n";
-	cout<<" Venta mínima: "<<menor<<endl;
+	cout<<" Venta mínima: s/"<<menor<<endl;
 	cout<<"\n";
-	cout<<" Venta máxima: "<<mayor<<endl;
+	cout<<" Venta máxima: s/"<<mayor<<endl;
 	cout<<"\n";
 	system("pause");
 }
@@ -48,7 +48,21 @@ void ventaTotal(){
 	}
 	cout<<"\n----------REPORTE DE LAS VENTAS DE LA VETERINARIA--------\n\n";
 	cout<<"\n";
-	cout<<"Venta total de los productos: "<<ventatotal<<endl;
+	cout<<"Venta total de los productos: s/"<<ventatotal<<endl;
+	cout<<"\n";
+	system("pause");
+}
+
+void ventaTotalHistorial() {
+	system("cls");
+	float ventatotal2=0;
+	
+		for(int i=0;i<cantidadDeHistorias;i++){
+		ventatotal2=ventatotal2+propietarios[i].mascot.historial.factura;
+	}
+	cout<<"\n----------REPORTE DE LOS PAGOS DEL HISTORIAL CLINICO--------\n\n";
+	cout<<"\n";
+	cout<<"Pago total del historial clinico: s/"<<ventatotal2<<endl;
 	cout<<"\n";
 	system("pause");
 }
