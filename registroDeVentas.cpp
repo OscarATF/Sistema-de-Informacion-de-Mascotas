@@ -22,12 +22,13 @@ void registrarVentas() {
 	    getline(cin, p.metodoDePago);
 	    mostrarInventario();
 	    cout << "\nIngrese el numero del producto: "; cin >> p.idproductoComprado;
+	    p.datosdelproducto=productos[p.idproductoComprado-1];
 	    if(productos[p.idproductoComprado-1].cantidad == 0){	
-    		cout << "\n| Lo lamento, ya no quedan estos productos |\n\n";
+    		cout << "\n| Lo lamento, producto no disponible |\n\n";
 		}else{	
 	    	cout << "Ingrese la cantidad de venta: "; cin >> p.cantidad;
 	    	if(p.cantidad <= productos[p.idproductoComprado-1].cantidad){ 
-		    	cout << "Ingrese el precio de venta: "; cin >> p.precioDeVenta;
+		    	p.precioDeVenta = p.cantidad*p.datosdelproducto.precio;
 		    	productos[p.idproductoComprado-1].cantidad-=p.cantidad;
 		    	ventas[cantidaddeventas] = p;
 		    	cantidaddeventas++;
@@ -45,10 +46,11 @@ void mostrarVentas(){
     cout << "\n----------- Lista de Ventas -------------\n\n";
     for (int i = 0; i < cantidaddeventas; ++i) {
         cout << "Venta " << ventas[i].id << "\t\tFecha: "<<ventas[i].fecha<<":\n\n";
-        cout << "Producto: " << ventas[i].idproductoComprado << "\n";
-        cout << "Cantidad: " << ventas[i].cantidad << "\n";
-        cout << "Precio que fue vendido: " << ventas[i].precioDeVenta << "\n";
         cout << "Cliente: " << ventas[i].nombreDelCliente << "\n";
+        cout << "Producto: " << ventas[i].datosdelproducto.nombreDelProducto << "\n";
+		cout << "Precio del producto: "<< ventas[i].datosdelproducto.precio<< "\n";
+        cout << "Cantidad de compra: " << ventas[i].cantidad << "\n";
+        cout << "Precio cancelado: " << ventas[i].precioDeVenta << "\n";
         cout << "Metodo de Pago: " << ventas[i].metodoDePago << "\n";
         cout << "-----------------------------------------\n";
     }
