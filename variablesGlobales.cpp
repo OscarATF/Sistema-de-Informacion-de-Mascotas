@@ -38,61 +38,71 @@ HistoriaClinica historias[capacidadMaxima] = {
             {"Diabetes","Ninguna","Ninguna","Vacuna contra rabia, vacuna contra parvovirus"},
             {"Examen de rutina", "Pérdida de apetito"},
             {"Dieta balanceada, ejercicio regular", "15/08/2024"},
-            {"Se recomienda seguimiento por el veterinario en 6 meses."}
+            {"Se recomienda seguimiento por el veterinario en 6 meses."},
+            {35.0}
         },
         {
             {"Ninguna", "Cirugía de esterilización", "Alergia a los ácaros", "Vacuna contra leucemia felina"},
             {"Revisión de piel", "Picazón excesiva"},
             {"Aplicar medicación antihistamínica", "10/08/2024"},
-            {"Se recomienda cambio de dieta y revisión en 2 semanas."}
+            {"Se recomienda cambio de dieta y revisión en 2 semanas."},
+            {36.0}
         },
         {
             {"Cardiopatía", "Ninguna", "Alergia a ciertos alimentos", "Vacunas anuales completas"},
             {"Chequeo cardiaco", "Tos persistente"},
             {"Revisar corazón, ajustar medicación", "20/08/2024"},
-            {"Necesario seguimiento con especialista en cardiología veterinaria."}
+            {"Necesario seguimiento con especialista en cardiología veterinaria."},
+            {30.0}
         },
         {
             {"Ninguna", "Cirugía de fractura", "Ninguna", "Vacuna contra leptospirosis"},
             {"Consulta general", "Cojera en pata trasera"},
             {"Reposo, fisioterapia", "25/08/2024"},
-            {"Se recomienda una revisión de la pata en 1 mes."}
+            {"Se recomienda una revisión de la pata en 1 mes."},
+            {24.0}
         },
         {
             {"Ninguna", "Ninguna", "Alergia a alimentos", "Vacuna contra rinotraqueítis"},
             {"Problemas respiratorios", "Estornudos frecuentes"},
             {"Revisión respiratoria, cambios en dieta", "30/08/2024"},
-            {"Monitorizar síntomas y ajustar dieta según sea necesario."}
+            {"Monitorizar síntomas y ajustar dieta según sea necesario."},
+            {33.0}
         },
         {
             {"Obesidad", "Ninguna", "Ninguna", "Vacunas de rutina"},
             {"Control de peso", "Exceso de peso"},
             {"Dieta baja en calorías, más ejercicio", "05/09/2024"},
-            {"Revisar progreso en 1 mes y ajustar plan si es necesario."}
+            {"Revisar progreso en 1 mes y ajustar plan si es necesario."},
+            {15.0}
         },
         {
             {"Ninguna", "Ninguna", "Ninguna", "Vacuna contra leucemia felina"},
             {"Chequeo de salud general", "Ninguno"},
             {"Recomendación de dieta y ejercicio", "15/09/2024"},
-            {"Control de salud general en 6 meses."}
+            {"Control de salud general en 6 meses."},
+            {21.0}
         },
         {
             {"Ninguna", "Cirugía ocular", "Ninguna", "Vacuna contra tos de las perreras"},
             {"Problemas oculares", "Lagrimeo excesivo"},
             {"Control de medicación ocular", "22/09/2024"},
-            {"Seguir las indicaciones del tratamiento ocular."}
+            {"Seguir las indicaciones del tratamiento ocular."},
+            {27.0}
         },
         {
             {"Dermatitis", "Cirugía de piel", "Ninguna", "Vacuna contra panleucopenia"},
             {"Problemas dermatológicos", "Piel seca"},
             {"Aplicar cremas especiales", "30/09/2024"},
-            {"Revisar condición de la piel en 2 semanas."}
+            {"Revisar condición de la piel en 2 semanas."},
+            {25.0}
         },
         {
             {"Ninguna", "Cirugía dental", "Alergia a pulgas", "Vacunas contra parvovirus y moquillo"},
             {"Chequeo dental", "Mal aliento"},
             {"Revisión dental periódica", "10/10/2024"},
-            {"Control dental en 6 meses y monitorear salud bucal."}
+            {"Control dental en 6 meses y monitorear salud bucal."},
+            {32.0}
         }
     };
 
