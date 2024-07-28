@@ -7,6 +7,7 @@
 #include "inventario.h"
 #include "historia.h"
 #include "registroDeVentas.h"
+#include "Reportes.h"
 using namespace std;
 void Menu() {
     int op;
@@ -234,8 +235,10 @@ void menuReportes(){
         cin >> opcion;
         switch (opcion) {
             case 1:
+            	minmax();
                 break;
             case 2:
+            	ventaTotal();
                 break;
             case 3:
 				break;    
