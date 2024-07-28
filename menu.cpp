@@ -1,14 +1,16 @@
 #include "menu.h"
 #include "estructuras.h"
 #include "variablesGlobales.h"
-#include <iostream>
 #include "propietario.h"
 #include "Mascota.h"
 #include "inventario.h"
 #include "historia.h"
 #include "registroDeVentas.h"
 #include "Reportes.h"
+#include <iostream>
+#include <windows.h>
 using namespace std;
+HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
 //Menu principal
 void Menu() {
@@ -16,13 +18,17 @@ void Menu() {
     do {
         system("cls");
         cout << "\nSistema de gestión veterinaria\n\n";
-        cout << "1. Gestión de Mascotas" << endl
-        	<< "2. Gestion de Propietario" << endl
-        	<< "3. Gestion Inventario " << endl
-        	<< "4. Historial clinico " << endl
-        	<< "5. Registro de Ventas " << endl
-        	<< "6. Reportes de las ventas " << endl
-        	<< "7. Salir del programa" << endl;
+        cout << "1. Gestión de Mascotas" << endl;
+        cout << "2. Gestion de Propietario" << endl;
+        SetConsoleTextAttribute(hConsole, 10);
+        cout << "3. Gestion Inventario " << endl;
+        SetConsoleTextAttribute(hConsole, 7);
+        cout << "4. Historial clinico " << endl;
+        SetConsoleTextAttribute(hConsole, 6);
+        cout << "5. Registro de Ventas " << endl;
+        SetConsoleTextAttribute(hConsole, 7);
+        cout << "6. Reportes de las ventas " << endl;
+        cout << "7. Salir del programa" << endl;
         cout << "\nDigite una opción: ";
         cin >> op;
         switch (op) {
@@ -92,6 +98,7 @@ void menuInventario() {
     int opcion;
     do{
         system("cls");
+        SetConsoleTextAttribute(hConsole, 10);
         cout << "\nGestión de Inventario\n\n";
         cout << "1. Agregar Producto\n";
         cout << "2. Actualizar Producto\n";
@@ -119,6 +126,7 @@ void menuInventario() {
                 break;
         }
  	}while(opcion!=5);
+ 	SetConsoleTextAttribute(hConsole, 7);
 }
 
 //FUNCION MENU MASCOTAS
@@ -194,6 +202,7 @@ void menuVentas(){
 	int opcion;
     do {
     	system("cls");
+    	SetConsoleTextAttribute(hConsole, 6);
         cout << "\nRegistro de Ventas\n\n";
         cout << "1. Agregar ventas\n";
         cout << "2. Listar ventas\n";
@@ -219,6 +228,7 @@ void menuVentas(){
                 break;
         }
     } while (opcion != 4);
+    SetConsoleTextAttribute(hConsole, 7);
 }
 
 //Wesley Laura 2024-119046
