@@ -17,6 +17,7 @@ void RegistrarPropietario() {
 	    cout << "Ingrese nombre completo: ";
 	    cin.ignore();
 	    getline(cin, propietarios[cantidaddepropietarios].nombreCompleto);
+	    (propietarios[cantidaddepropietarios].nombreCompleto)[0]=toupper((propietarios[cantidaddepropietarios].nombreCompleto)[0]);
 	    cout << "Ingrese contacto (Numero telefonico): ";
 	    getline(cin, propietarios[cantidaddepropietarios].contacto);
 	    //Tamano de caracteres del contacto para la validacion

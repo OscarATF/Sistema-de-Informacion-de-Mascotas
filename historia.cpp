@@ -31,7 +31,7 @@ void agregarActualizarHistoria() {
 	    	cin>>selec;
 	}
 	indice=selec-1;
-	cout<<"Propietario "<<selec<<" seleccionado"<<endl;
+	cout<<"\nPropietario "<<selec<<" seleccionado\n"<<endl;
 	system("pause");
 	system("cls");
 	//Imprime el nombre del propietario y su mascota
@@ -40,25 +40,25 @@ void agregarActualizarHistoria() {
 	//Solicita los datos correspondientes
 	cout<<"\nHistorial clinico\n";
 	cout<<"\nANTECEDENTES MEDICOS\n"<<endl
-		<<"Enfermedades previas:"<<endl;
+		<<"Enfermedades previas: ";
 	cin.ignore();
 	getline(cin,propietarios[indice].mascot.historial.antecedentes.enfermedadesPrevias);
-	cout<<"\nCirugias Pasadas:"<<endl;
+	cout<<"\nCirugias Pasadas: ";
 	getline(cin,propietarios[indice].mascot.historial.antecedentes.cirugiasPasadas);
-	cout<<"\nAlergias conocidas:"<<endl;
+	cout<<"\nAlergias conocidas: ";
 	getline(cin,propietarios[indice].mascot.historial.antecedentes.alergiasConocidas);
-	cout<<"\nVacunaciones:"<<endl;
+	cout<<"\nVacunaciones: ";
 	getline(cin,propietarios[indice].mascot.historial.antecedentes.vacunaciones);
-	cout<<"\nMotivo de visita:"<<endl;
+	cout<<"\nMotivo de visita: ";
 	getline(cin,propietarios[indice].mascot.historial.motivoVisita.motivo);
-	cout<<"\nSintomas:"<<endl;
+	cout<<"\nSintomas:";
 	getline(cin,propietarios[indice].mascot.historial.motivoVisita.sintomas);
 	cout<<"\nPLAN DE SEGUIMIENTO\n"<<endl
-		<<"Recomendaciones:"<<endl;
+		<<"Recomendaciones:";
 	getline(cin,propietarios[indice].mascot.historial.planSeguimiento.recomendaciones);
 	//Este bucle es Validacion, permitira volver a preguntar la fecha al usuario.
 	do{ 
-		cout<<"Proxima cita (DD/MM/YYYY):"<<endl;
+		cout<<"\nProxima cita (DD/MM/YYYY): ";
 		getline(cin,propietarios[indice].mascot.historial.planSeguimiento.proximaCita);
 		p=propietarios[indice].mascot.historial.planSeguimiento.proximaCita;
 		cantidadCaracteres = p.length();
@@ -73,20 +73,19 @@ void agregarActualizarHistoria() {
 	}while(cantidadCaracteres != 10); //El bucle finaliza cuando cantidaCaracteres es 10.
 	
 	//continua con el registro del historial
-	cout<<"Nota del veterinario:"<<endl;
+	cout<<"\nNota del veterinario: ";
 	getline(cin,propietarios[indice].mascot.historial.notasVeterinario);
 	// Validar la edad de la mascota
     while (true) {
-        cout<<"\nPago efectuado:"<<endl;
+        cout<<"\nPago efectuado: ";
 		cin>>propietarios[indice].mascot.historial.factura;
         if (cin.fail()) {
             cin.clear(); // Limpiar el estado de error de std::cin
             cin.ignore(10000, '\n'); // Descartar la entrada inválida
             cout << "\nEntrada no válida. Por favor, ingrese un número.\n";
-            cout<<"\n";
         } else {
         	while (propietarios[indice].mascot.historial.factura<0) {
-        		cout<<"\nINVALIDO!! Porfavor ingrese un numero positivo:";
+        		cout<<"\nINVALIDO!! Porfavor ingrese un numero positivo: ";
 				cin>>propietarios[indice].mascot.historial.factura;
 			}
 			cout<<"\nHistorial clinico agregado\n"<<endl;
@@ -115,7 +114,7 @@ void listarHistorias() {
 			<<"\nRecomendaciones: "<< propietarios[i].mascot.historial.planSeguimiento.recomendaciones <<endl 
             <<"\nProxima cita: "<< propietarios[i].mascot.historial.planSeguimiento.proximaCita << endl;
         cout<<"\nNotas del Veterinario: " << propietarios[i].mascot.historial.notasVeterinario << endl;
-        cout<<"\nPago efetuado: " << propietarios[i].mascot.historial.factura << endl<<endl;
+        cout<<"\nPago efetuado: s/" << propietarios[i].mascot.historial.factura << endl<<endl;
         cout<<"---------------------------------" << endl;
         
     }
