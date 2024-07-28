@@ -4,6 +4,7 @@
 #include "variablesGlobales.h"
 #include "Mascota.h"
 using namespace std;
+
 void RegistrarPropietario() {
 	system("cls");
 	int indice;
@@ -12,8 +13,6 @@ void RegistrarPropietario() {
         cout << "No se pueden agregar más propietarios, límite alcanzado.\n";
         return;
     } else {
-	    Propietario p; //para la id
-	    p.id = cantidaddepropietarios + 1;
 	    cout << "Ingrese nombre completo: ";
 	    cin.ignore();
 	    getline(cin, propietarios[cantidaddepropietarios].nombreCompleto);
