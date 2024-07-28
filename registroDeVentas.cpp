@@ -22,14 +22,21 @@ void registrarVentas() {
 	    getline(cin, p.metodoDePago);
 	    mostrarInventario();
 	    cout << "\nIngrese el numero del producto: "; cin >> p.idproductoComprado;
-    	cout << "Ingrese la cantidad de venta: "; cin >> p.cantidad;
-    	cout << "Ingrese el precio de venta: "; cin >> p.precioDeVenta;
-    	productos[p.idproductoComprado-1].cantidad-=p.cantidad;
-    ventas[cantidaddeventas] = p;
-    cantidaddeventas++;
-    cout << "\nLa venta a sido registrada correctamente.\n\n";
-    
-    system("pause");
+	    if(productos[p.idproductoComprado-1].cantidad == 0){	
+    		cout << "\n| Lo lamento, ya no quedan estos productos |\n\n";
+		}else{	
+	    	cout << "Ingrese la cantidad de venta: "; cin >> p.cantidad;
+	    	if(p.cantidad <= productos[p.idproductoComprado-1].cantidad){ 
+		    	cout << "Ingrese el precio de venta: "; cin >> p.precioDeVenta;
+		    	productos[p.idproductoComprado-1].cantidad-=p.cantidad;
+		    	ventas[cantidaddeventas] = p;
+		    	cantidaddeventas++;
+		    	cout << "\nLa venta a sido registrada correctamente.\n\n";
+			}else{
+				cout<<"\n ERROR - CANTIDAD EXCESIVA\n\n";
+			}
+	 	}
+	system("pause");
 	}
 }
 
