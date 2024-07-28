@@ -16,7 +16,20 @@ system("cls");
     mascota[cantidadDeMascotas].id_mascota++;
     cin.ignore();
     cout << "\nIngrese nombre de la mascota: "; getline(cin, mascota[cantidadDeMascotas].nombre);
-    cout<<"Ingrese la edad de la mascota: "; cin>> mascota[cantidadDeMascotas].edad;
+    
+    // Validar la edad de la mascota
+    while (true) {
+        cout << "Ingrese la edad de la mascota: "; cin >> mascota[cantidadDeMascotas].edad;
+        if (cin.fail()) {
+            cin.clear(); // Limpiar el estado de error de std::cin
+            cin.ignore(10000, '\n'); // Descartar la entrada inválida
+            cout << "\nEntrada no válida. Por favor, ingrese un número.\n";
+            cout<<"\n";
+        } else {
+            cin.ignore(10000, '\n'); // Descartar cualquier entrada adicional
+            break;
+        }
+    }
     cout << "Ingrese la especie: "; cin >> mascota[cantidadDeMascotas].especie;
     cout<<"Ingrese la raza: "; cin>>mascota[cantidadDeMascotas].raza;
     cantidadDeMascotas++;
@@ -83,8 +96,19 @@ void ActualizarMascota() {
 	cout<<"Ingrese el nuevo nombre de la mascota : ";
 	cin.ignore();
 	getline(cin,mascota[id_mascota].nombre);
-	cout << "Ingrese la nueva edad de la mascota: ";
-    cin>>mascota[id_mascota].edad;
+	
+	while (true) {
+        cout << "Ingrese la nueva edad de la mascota: "; cin >> mascota[id_mascota].edad;
+        if (cin.fail()) {
+            cin.clear(); // Limpiar el estado de error de std::cin
+            cin.ignore(10000, '\n'); // Descartar la entrada inválida
+            cout << "\nEntrada no válida. Por favor, ingrese un número.\n";
+            cout<<"\n";
+        } else {
+            cin.ignore(10000, '\n'); // Descartar cualquier entrada adicional
+            break;
+        }
+    }
 	cout<<"\n\nMascota actualizado\n"<<endl;
 	system("pause");
 
