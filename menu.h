@@ -7,7 +7,7 @@ void Menu();
 void menuPropietario();
 void menuHistorial();
 
-//Yair
+//Declaracion de funciones usadas en menu.cpp -Yair
 void menuInventario();
 void menuVentas();
 

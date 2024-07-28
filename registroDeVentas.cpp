@@ -2,8 +2,10 @@
 #include <iostream>
 #include "estructuras.h"
 #include "variablesGlobales.h"
-#include "inventario.h" // esto es para listar los productos
+#include "inventario.h" 
 
+
+//Registra las ventas
 void registrarVentas() {
 	int cantidadCaracteres;	
 	system("cls");		
@@ -17,31 +19,36 @@ void registrarVentas() {
 	cout << "Ingrese nombre del cliente: ";
 	cin.ignore();
 	getline(cin, p.nombreDelCliente);
-	do{ //Este bucle es Validacion, permitira volver a preguntar la fecha al usuario.
+	
+	//Este bucle es Validacion, permitira volver a preguntar la fecha al usuario.
+	do{ 
 		cout << "Ingrese la fecha (DD/MM/YYYY): ";
 	    getline(cin, p.fecha);
 		cantidadCaracteres = p.fecha.length();
 		
-		//Esto valida
+		//Esto valida que la fecha tenga / 
 		if (p.fecha[2]!= '/' || p.fecha[5]!= '/'){ 
 			cantidadCaracteres = 9; // se da 9 para volver al bucle
 		}
 		if(cantidadCaracteres != 10){  //Esto es para el error en el caso de que sea diferente de 10.
 			cout << "\nError fecha invalida, INGRESE DE NUEVO.\n\n";
 		}
-	}while(cantidadCaracteres != 10);
-
-
-
+	}while(cantidadCaracteres != 10); //El bucle finaliza cuando cantidaCaracteres es 10.
+	
+	//continua con el registro de la venta
 	cout << "Ingrese el metodo de pago: ";
 	getline(cin, p.metodoDePago);
 	mostrarInventario();
 	cout << "\nIngrese el numero del producto: "; cin >> p.idproductoComprado;
 	p.datosdelproducto=productos[p.idproductoComprado-1];
+	
+	//validacion de disponibilidad del producto
 	if(productos[p.idproductoComprado-1].cantidad == 0){	
 	    cout << "\n| Lo lamento, producto no disponible |\n\n";
 	}else{	
 		cout << "Ingrese la cantidad de venta: "; cin >> p.cantidad;
+		
+		//validacion para la cantidad excesiva de productos
 		if(p.cantidad <= productos[p.idproductoComprado-1].cantidad){ 
 			p.precioDeVenta = p.cantidad*p.datosdelproducto.precio;
 			productos[p.idproductoComprado-1].cantidad-=p.cantidad;						
@@ -55,6 +62,7 @@ void registrarVentas() {
 	system("pause");
 }
 
+//Mostrar ventas 
 void mostrarVentas(){
 	system("cls");
     cout << "\n----------- Lista de Ventas -------------\n\n";
