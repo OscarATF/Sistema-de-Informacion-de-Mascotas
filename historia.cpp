@@ -6,25 +6,38 @@
 #include "historia.h"
 
 using namespace std;
-
+//FUNCION PARA AGREGAR O ACTUALIZAR UN HISTORIAL
 void agregarActualizarHistoria() {
 	string p;
 	int indice;
 	int selec;
 	int cantidadCaracteres;
 	system("cls");
+	//IMPRIME LISTA DE PROPIETARIOS EXISTENTES
+	cout << "--- Lista de Propietarios ---\n";
 	for (int i=0;i<cantidaddepropietarios;i++) {
 		cout<<"PROPIETARIO "<<i+1<<":\n";
 		cout<<"Nombre: "<<propietarios[i].nombreCompleto<<"\n";
+		cout<<"Nombre de la Mascota: "<<propietarios[i].mascot.nombre<<endl;
+		cout<<"---------------------------------" << endl;
 	}
-	cout<<"Seleccione el propietario de la mascota: "<<endl;
+	//Seleccion de propietario
+	cout<<"\nSeleccione un propietario con historial existente para actualizarlo o seleccione un propietario\nrecientemente agregado para añadir un historial clinico a su mascota\n";
+	cout<<"\nSeleccione el propietario de la mascota: ";
 	cin>>selec;
+	//Validacion para seleccion fuera de la lista
+	while (selec>cantidaddepropietarios || selec<1) {
+	    	cout<<"\nINVALIDO!!\n\nPorfavor ingrese un propietario de la lista: ";
+	    	cin>>selec;
+	}
 	indice=selec-1;
 	cout<<"Propietario "<<selec<<" seleccionado"<<endl;
 	system("pause");
 	system("cls");
+	//Imprime el nombre del propietario y su mascota
 	cout<<"Nombre: "<<propietarios[indice].nombreCompleto<<endl;
 	cout<<"Nombre de la Mascota: "<<propietarios[indice].mascot.nombre<<endl;
+	//Solicita los datos correspondientes
 	cout<<"\nHistorial clinico\n";
 	cout<<"\nANTECEDENTES MEDICOS\n"<<endl
 		<<"Enfermedades previas:"<<endl;
@@ -50,7 +63,7 @@ void agregarActualizarHistoria() {
 		p=propietarios[indice].mascot.historial.planSeguimiento.proximaCita;
 		cantidadCaracteres = p.length();
 		
-		//Esto valida que la fecha tenga '/'
+		//Valida que la fecha contenga el caracter '/'
 		if (p[2]!= '/' || p[5] != '/'){ 
 			cantidadCaracteres = 9; // se da 9 para volver al bucle
 		}
@@ -62,14 +75,17 @@ void agregarActualizarHistoria() {
 	//continua con el registro del historial
 	cout<<"Nota del veterinario:"<<endl;
 	getline(cin,propietarios[indice].mascot.historial.notasVeterinario);
+	cout<<"\nPago efectuado:"<<endl;
+	cin>>propietarios[indice].mascot.historial.factura;
+	
 	system("pause");
 	cantidadDeHistorias++;
 }
-
+//FUNCION PARA IMPRIMIR UNA LISTA DE HISTORIALES
 void listarHistorias() {
 	system("cls");
 	 for (int i = 0; i <cantidaddepropietarios; ++i) {
-        cout<<"Historia Clinica "<< i + 1 << ":" << endl;
+        cout<<"Historial Clinico "<< i + 1 << ":" << endl<<endl;
         cout<<"Propietario: "<< propietarios[i].nombreCompleto << ", "  
             << propietarios[i].contacto<< endl;
         cout<<"Mascota: "<< propietarios[i].mascot.nombre<<endl;
@@ -83,12 +99,9 @@ void listarHistorias() {
         cout<<"\nPLAN DE SEGUIMIENTO\n " 
 			<<"\nRecomendaciones: "<< propietarios[i].mascot.historial.planSeguimiento.recomendaciones <<endl 
             <<"\nProxima cita: "<< propietarios[i].mascot.historial.planSeguimiento.proximaCita << endl;
-        cout<<"\nNotas del Veterinario: " << propietarios[i].mascot.historial.notasVeterinario << endl<<endl;
+        cout<<"\nNotas del Veterinario: " << propietarios[i].mascot.historial.notasVeterinario << endl;
+        cout<<"\nPago efetuado: " << propietarios[i].mascot.historial.factura << endl<<endl;
         cout<<"---------------------------------" << endl;
     }
     system("pause");
 }
-
-
-
-

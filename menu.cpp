@@ -18,7 +18,8 @@ void Menu() {
     do {
         system("cls");
         SetConsoleTextAttribute(hConsole, 7);
-        cout << "\nSistema de gestión veterinaria\n\n";
+        cout << "\nSISTEMA DE GESTION VETERINARIA\n\n";
+        cout << "MENU PRINCIPAL\n\n";
         SetConsoleTextAttribute(hConsole,13);// color de fuente púrpura claro
         cout << "1. Gestión de Mascotas" << endl;
         SetConsoleTextAttribute(hConsole, 9);
@@ -154,7 +155,7 @@ void menuMascotas() {
     int opcion;
     do {
     	system("cls");
-    	 SetConsoleTextAttribute(hConsole,13);// color de fuente púrpura claro
+    	SetConsoleTextAttribute(hConsole,13);// color de fuente púrpura claro
         cout << "\nGestión de mascotas\n\n";
         cout << "1. Agregar Mascota\n";
         cout << "2. Listar mascotas\n";

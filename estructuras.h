@@ -27,6 +27,7 @@ struct HistoriaClinica {
     MotivoVisita motivoVisita;
     PlanSeguimiento planSeguimiento;
     string notasVeterinario;
+    float factura;
 };
 
 struct Mascota{
