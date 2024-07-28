@@ -5,28 +5,6 @@
 
 using namespace std;
 
-struct Mascota{
-	int id_mascota;
-	string nombre;
-	string especie;
-	string raza;
-	int edad;
-};
-
-struct Propietario {
-    int id;
-    string nombreCompleto;
-    string contacto;
-    Mascota mascot;
-};
-
-struct Inventario {
-    int id_producto;
-    string nombreDelProducto;
-    float precio;
-    int cantidad;
-};
-
 struct AntecedentesMedicos {
     string enfermedadesPrevias;
     string cirugiasPasadas;
@@ -50,6 +28,29 @@ struct HistoriaClinica {
     PlanSeguimiento planSeguimiento;
     string notasVeterinario;
 };
+
+struct Mascota{
+	int id_mascota;
+	string nombre;
+	string especie;
+	string raza;
+	int edad;
+	HistoriaClinica historial;
+};
+
+struct Propietario {
+    string nombreCompleto;
+    string contacto;
+    Mascota mascot;
+};
+
+struct Inventario {
+    int id_producto;
+    string nombreDelProducto;
+    float precio;
+    int cantidad;
+};
+
 
 struct Ventas {
     int id;                    

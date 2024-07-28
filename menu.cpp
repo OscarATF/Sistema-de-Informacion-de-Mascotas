@@ -161,10 +161,10 @@ void menuHistorial() {
 int opcion;
     do {
     	system("cls");
-        cout << "\nHistoria clinica\n\n";
-        cout << "1. Agregar historia\n";
-        cout << "2. Listar historias\n";
-        cout << "3. Actualizar historia\n";
+        cout << "\nHistorial clinico\n\n";
+        cout << "1. Agregar historial clinico\n";
+        cout << "2. Listar historiales clinicos\n";
+        cout << "3. Actualizar historial clinico\n";
         cout << "4. Volver al Menú Principal\n";
         cout << "\nSeleccione una opción: ";
         cin >> opcion;

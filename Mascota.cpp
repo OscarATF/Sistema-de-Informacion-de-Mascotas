@@ -26,6 +26,7 @@ system("cls");
 }
 //Agregando nueva funcion de listar mascotas
 // Nueva función de listar mascotas
+
 void ListarMascotas(){
 	system("cls");
 	cout<<"\n---------Lista de mascotas---------\n";

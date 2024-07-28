@@ -32,34 +32,10 @@ Inventario productos[capacidadMaxima] ={
 
 };
 //Agregando datos establecidos de la estructura de mascotas
-Mascota mascota[capacidadMaxima] = {
-    {1, "BOBY", "Perro", "Bulldog", 3},
-    {2, "RUFO", "Hámster","Rata",1},
-    {3, "HARRY", "Gato","Siamés",3},
-    {4, "PIPO", "Perro","Labrador retriever",2},
-    {5, "SAM", "Perro","Chihuahua",3},
-    {6, "DOKI", "Perro","Rottweiler", 2},
-    {7, "CALVIN", "Perro","Chihuahueño",3},
-    {8, "RAMBO", "Perro","Pastor alemán",5},
-    {9, "RAU", "Perro","Dóberman",6},
-    {10, "LUA", "Perro","Shih Tzu", 1}
-};
-Propietario propietarios[capacidadMaxima] = {
-    {0, "Juan Perez", "912345678", mascota[0]},
-    {1, "Maria Garcia", "923456789", mascota[1]},
-    {2, "Carlos Sanchez", "934567890", mascota[2]},
-    {3, "Ana Martinez", "945678901", mascota[3]},
-    {4, "Luis Gomez", "956789012", mascota[4]},
-    {5, "Laura Diaz", "967890123", mascota[5]},
-    {6, "Pedro Rodriguez", "978901234", mascota[6]},
-    {7, "Sofia Lopez", "989012345", mascota[7]},
-    {8, "Diego Fernandez", "990123456", mascota[8]},
-    {9, "Marta Jimenez", "901234567", mascota[9]}
-};
 
 HistoriaClinica historias[capacidadMaxima] = {
 		{
-            {"Diabetes", "Ninguna", "Ninguna", "Vacuna contra rabia, vacuna contra parvovirus"},
+            {"Diabetes","Ninguna","Ninguna","Vacuna contra rabia, vacuna contra parvovirus"},
             {"Examen de rutina", "Pérdida de apetito"},
             {"Dieta balanceada, ejercicio regular", "15/08/2024"},
             {"Se recomienda seguimiento por el veterinario en 6 meses."}
@@ -119,6 +95,32 @@ HistoriaClinica historias[capacidadMaxima] = {
             {"Control dental en 6 meses y monitorear salud bucal."}
         }
     };
+
+Mascota mascota[capacidadMaxima] = {
+    {1, "BOBY", "Perro", "Bulldog", 3,historias[0]},
+    {2, "RUFO", "Hámster","Rata",1,historias[1]},
+    {3, "HARRY", "Gato","Siamés",3,historias[2]},
+    {4, "PIPO", "Perro","Labrador retriever",2,historias[3]},
+    {5, "SAM", "Perro","Chihuahua",3,historias[4]},
+    {6, "DOKI", "Perro","Rottweiler", 2,historias[5]},
+    {7, "CALVIN", "Perro","Chihuahueño",3,historias[6]},
+    {8, "RAMBO", "Perro","Pastor alemán",5,historias[7]},
+    {9, "RAU", "Perro","Dóberman",6,historias[8]},
+    {10, "LUA", "Perro","Shih Tzu", 1,historias[9]}
+};
+
+Propietario propietarios[capacidadMaxima] = {
+    {"Juan Perez", "912345678", mascota[0]},
+    {"Maria Garcia", "923456789", mascota[1]},
+    {"Carlos Sanchez", "934567890", mascota[2]},
+    {"Ana Martinez", "945678901", mascota[3]},
+    {"Luis Gomez", "956789012", mascota[4]},
+    {"Laura Diaz", "967890123", mascota[5]},
+    {"Pedro Rodriguez", "978901234", mascota[6]},
+    {"Sofia Lopez", "989012345", mascota[7]},
+    {"Diego Fernandez", "990123456", mascota[8]},
+    {"Marta Jimenez", "901234567", mascota[9]}
+};
 
 Ventas ventas[capacidadMaxima] = {
     {1, 10, 200, "Pedro Martinez", "Pago en efectivo",1,"10/07/2024",productos[0]},
