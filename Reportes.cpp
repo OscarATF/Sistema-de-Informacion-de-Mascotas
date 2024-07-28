@@ -9,28 +9,30 @@
 #include "Mascota.h"
 
 using namespace std;
+
 //Wesley Laura 2024-119046
 //Funcion de ventas mínima y máxima
 
 void minmax(){
 	system("cls");
-	int menor=ventas[0].precioDeVenta;
-	int mayor=ventas[1].precioDeVenta;
+	float menor=ventas[0].precioDeVenta;
+	float mayor=ventas[1].precioDeVenta;
 	
 	for(int i=0;i<cantidaddeventas;i++){
 		
-			if(mayor<ventas[i].precioDeVenta){
-				mayor=ventas[i].precioDeVenta;
-				
-					if(menor>ventas[i].precioDeVenta){
-					menor=ventas[i].precioDeVenta;
-					}
-			}
-			
+		if(mayor<ventas[i].precioDeVenta){
+			mayor=ventas[i].precioDeVenta;		
+		}
+		
+		if(menor>ventas[i].precioDeVenta){
+			menor=ventas[i].precioDeVenta;
+		}		
 	}
+	cout<<"\n----------REPORTE DE LAS VENTAS DE LA VETERINARIA--------\n\n";
 	cout<<" Venta mínima: "<<menor<<endl;
+	cout<<"\n";
 	cout<<" Venta máxima: "<<mayor<<endl;
-	
+	cout<<"\n";
 	system("pause");
 }
 		
@@ -39,12 +41,14 @@ void minmax(){
 
 void ventaTotal(){
 	system("cls");
-	int ventatotal=0;
+	float ventatotal=0;
 	
 		for(int i=0;i<cantidaddeventas;i++){
 		ventatotal=ventatotal+ventas[i].precioDeVenta;
 	}
+	cout<<"\n----------REPORTE DE LAS VENTAS DE LA VETERINARIA--------\n\n";
 	cout<<"\n";
 	cout<<"Venta total de los productos: "<<ventatotal<<endl;
+	cout<<"\n";
 	system("pause");
 }

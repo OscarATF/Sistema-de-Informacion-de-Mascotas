@@ -9,6 +9,8 @@
 #include "registroDeVentas.h"
 #include "Reportes.h"
 using namespace std;
+
+//Menu principal
 void Menu() {
     int op;
     do {
@@ -50,8 +52,8 @@ void Menu() {
         }
     } while (op != 7);
 }
-//FIN DE FUNCION MENU
 
+//Menu de gestion de propietarios
 void menuPropietario() {
     int opcion;
     do {
@@ -89,7 +91,7 @@ void menuPropietario() {
         }
     } while (opcion != 6);
 }
-// FUNCION MENU DE INVENTARIO.   DANNY YAIR LUQUE PARI 2024-119013 <----------------------
+// Funcion de menu de gestion de inventario.   DANNY YAIR LUQUE PARI 2024-119013 <----------------------
 void menuInventario() {
     int opcion;
     do{
@@ -122,7 +124,6 @@ void menuInventario() {
         }
  	}while(opcion!=5);
 }
-//FIN DE FUNCION MENU DE INVENTARIO.
 
 //FUNCION MENU MASCOTAS
 void menuMascotas() {
@@ -189,7 +190,7 @@ int opcion;
     } while (opcion != 3);
 }
 
-//MENU DE VENTAS 
+//Menu de registro de ventas 
 void menuVentas(){
 	int opcion;
     do {
@@ -222,7 +223,6 @@ void menuVentas(){
 }
 
 //Wesley Laura 2024-119046
-
 //MENU DE REPORTE DE VENTAS
 void menuReportes(){
 	int opcion;

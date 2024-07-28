@@ -6,28 +6,26 @@
 
 //FUNCION REGISTRAR PRODUCTO
 void RegistrarProducto() {
+	//Comprueba si se pasa de la capacidad maxima
     if (cantidaddeproductos >= capacidadMaxima) {
         cout << "No se pueden agregar más productos, límite alcanzado.\n";
         return;
     }
 
-    Inventario inv; //para la id
+    Inventario inv;
     inv.id_producto = cantidaddeproductos + 1;
     cin.ignore();
-    system("cls");
+    system("cls"); //limpia la pantalla
     cout << "Ingrese nombre del producto: "; getline(cin, inv.nombreDelProducto);
     cout << "Ingrese cantidad: "; cin >> inv.cantidad;
     cout << "Ingrese el precio:"; cin >> inv.precio;
-    
-
     productos[cantidaddeproductos] = inv;
     cantidaddeproductos++;
     cout << "\nProducto agregado exitosamente.\n\n";
     system("pause");
 }
-//FUNCION REGISTRAR PRODUCTO
 
-//MOSTRAR INVENTARIO
+//FUNCION PARA MOSTRAR INVENTARIO
 void mostrarInventario() {
 	system("cls");
     cout << "Lista de productos registrados:\n";
@@ -40,9 +38,9 @@ void mostrarInventario() {
 	}
     system("pause");
 }
-//FIN DE FUNCION MOSTRAR INVENTARIO
 
-//FUNCION ELIMINAR INVENTARIO
+
+//FUNCION PARA ELIMINAR INVENTARIO
 void eliminarInventario() {
 	int indice;
 	int producto;
@@ -57,7 +55,7 @@ void eliminarInventario() {
 			cout<<"Digite el numero de producto que desea eliminar: ";
 			cin>>producto;
 			indice=producto-1;
-		if (indice >= 0 && indice < cantidaddeproductos) {
+		if (indice >= 0 && indice < cantidaddeproductos) { //verifica que el indice este en la cantidad de productos
 			for (int j=indice;j<cantidaddeproductos-1;++j) {
 				productos[j]=productos[j+1];
 			}
@@ -68,8 +66,6 @@ void eliminarInventario() {
 		}
 	system("pause");
 }
-
-//FIN DE ELIMINAR INVENTARIO
 
 //FUNCION ACTUALIZAR INVENTARIO
 void actualizarInventario() {
@@ -99,4 +95,3 @@ void actualizarInventario() {
 	system("pause");
 
 }
-//FIN DE FUNCION ACTUALIZAR PROPIETARIO 
