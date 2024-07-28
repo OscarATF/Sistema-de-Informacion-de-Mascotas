@@ -6,11 +6,9 @@
 using namespace std;
 void RegistrarPropietario() {
 	system("cls");
-	if (cantidadDeMascotas<=10) {
-		cout<<"Ingrese antes una mascota"<<endl;
-		system("pause");
-		return;
-	} else if (cantidaddepropietarios >= capacidadMaxima) {
+	int indice;
+	int seleccion;
+	if (cantidaddepropietarios >= capacidadMaxima) {
         cout << "No se pueden agregar más propietarios, límite alcanzado.\n";
         return;
     } else {
@@ -18,25 +16,24 @@ void RegistrarPropietario() {
 	    p.id = cantidaddepropietarios + 1;
 	    cout << "Ingrese nombre completo: ";
 	    cin.ignore();
-	    getline(cin, p.nombreCompleto);
+	    getline(cin, propietarios[cantidaddepropietarios].nombreCompleto);
 	    cout << "Ingrese contacto: ";
-	    getline(cin, p.contacto);
+	    getline(cin, propietarios[cantidaddepropietarios].contacto);
 	 	cout << "Seleccione la mascota para el propietario:\n";
        	cout<<"\n---------Lista de mascotas---------\n";
 		for(int i=0;i<cantidadDeMascotas;i++){
-			cout<<"Mascota "<<mascota[i].id_mascota<<":\n";
+			cout<<"Mascota "<<i+1<<":\n";
 			cout<<"Nombre: "<<mascota[i].nombre<<"\n";
     	}
-        int seleccion;
+        
         cout << "Ingrese el número de la mascota: ";
         cin >> seleccion;
+        indice=seleccion-1;
         
         if (seleccion > 0 && seleccion <= cantidadDeMascotas) {
-            p.id_Mascota = mascota[seleccion - 1].id_mascota;
-            propietarios[cantidaddepropietarios] = p;
-            cantidaddepropietarios++;
-            cout << "Propietario agregado exitosamente con la mascota.\n";
+            propietarios[cantidaddepropietarios].mascot=mascota[indice];
 	    	cout << "Propietario agregado exitosamente.\n";
+	    	cantidaddepropietarios++;
 	    	system("pause");
         } else {
             cout << "Selección inválida. No se pudo registrar el propietario.\n";
@@ -51,9 +48,10 @@ void listaDePropietarios() {
     cout << "\n--- Lista de Propietarios ---\n";
     for (int i = 0; i < cantidaddepropietarios; ++i) {
         cout << "Propietario " << i+1 << ":\n";
-        cout << "Nombre Completo: " << propietarios[i].nombreCompleto << "\n";
+        cout << "Nombre Completo: " <<propietarios[i].nombreCompleto << "\n";
         cout << "Contacto: " << propietarios[i].contacto << "\n";
-        cout << "-----------------------------\n";
+        cout <<"Nombre de mascota: "<<propietarios[i].mascot.nombre<<endl;
+		cout << "-----------------------------\n";
     }
     system("pause");
 }

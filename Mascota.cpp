@@ -15,14 +15,13 @@ system("cls");
         return;
     }
 
-    Mascota m; //para la id
-    m.id_mascota = cantidadDeMascotas + 1;
+
+    mascota[cantidadDeMascotas].id_mascota++;
     cin.ignore();
-    cout << "\nIngrese nombre de la mascota: "; getline(cin, m.nombre);
-    cout<<"Ingrese la edad de la mascota: "; cin>> m.edad;
-    cout << "Ingrese la especie: "; cin >> m.especie;
-    cout<<"Ingrese la raza: "; cin>>m.raza;
-    mascota[cantidadDeMascotas] = m;
+    cout << "\nIngrese nombre de la mascota: "; getline(cin, mascota[cantidadDeMascotas].nombre);
+    cout<<"Ingrese la edad de la mascota: "; cin>> mascota[cantidadDeMascotas].edad;
+    cout << "Ingrese la especie: "; cin >> mascota[cantidadDeMascotas].especie;
+    cout<<"Ingrese la raza: "; cin>>mascota[cantidadDeMascotas].raza;
     cantidadDeMascotas++;
     cout << "\nMascota agregado exitosamente.\n\n";
     
