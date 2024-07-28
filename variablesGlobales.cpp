@@ -1,5 +1,6 @@
 #include "variablesGlobales.h"
 
+
 #include "registroDeVentas.h"
 int cantidaddepropietarios = 10;
 int cantidaddeproductos = 20; // cantidad de productos del inventario.
