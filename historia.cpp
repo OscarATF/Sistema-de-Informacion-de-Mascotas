@@ -8,9 +8,10 @@
 using namespace std;
 
 void agregarActualizarHistoria() {
-	int id;
+	string p;
 	int indice;
 	int selec;
+	int cantidadCaracteres;
 	system("cls");
 	for (int i=0;i<cantidaddepropietarios;i++) {
 		cout<<"PROPIETARIO "<<i+1<<":\n";
@@ -42,8 +43,23 @@ void agregarActualizarHistoria() {
 	cout<<"\nPLAN DE SEGUIMIENTO\n"<<endl
 		<<"Recomendaciones:"<<endl;
 	getline(cin,propietarios[indice].mascot.historial.planSeguimiento.recomendaciones);
-	cout<<"Proxima cita:"<<endl;
-	getline(cin,propietarios[indice].mascot.historial.planSeguimiento.proximaCita);
+	//Este bucle es Validacion, permitira volver a preguntar la fecha al usuario.
+	do{ 
+		cout<<"Proxima cita (DD/MM/YYYY):"<<endl;
+		getline(cin,propietarios[indice].mascot.historial.planSeguimiento.proximaCita);
+		p=propietarios[indice].mascot.historial.planSeguimiento.proximaCita;
+		cantidadCaracteres = p.length();
+		
+		//Esto valida que la fecha tenga '/'
+		if (p[2]!= '/' || p[5] != '/'){ 
+			cantidadCaracteres = 9; // se da 9 para volver al bucle
+		}
+		if(cantidadCaracteres != 10){  //Esto es para el error en el caso de que sea diferente de 10.
+			cout << "\nError fecha invalida, INGRESE DE NUEVO.\n\n";
+		}
+	}while(cantidadCaracteres != 10); //El bucle finaliza cuando cantidaCaracteres es 10.
+	
+	//continua con el registro del historial
 	cout<<"Nota del veterinario:"<<endl;
 	getline(cin,propietarios[indice].mascot.historial.notasVeterinario);
 	system("pause");

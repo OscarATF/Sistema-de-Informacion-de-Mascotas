@@ -17,12 +17,14 @@ void Menu() {
     int op;
     do {
         system("cls");
+        SetConsoleTextAttribute(hConsole, 7);
         cout << "\nSistema de gestión veterinaria\n\n";
         cout << "1. Gestión de Mascotas" << endl;
+        SetConsoleTextAttribute(hConsole, 9);
         cout << "2. Gestion de Propietario" << endl;
         SetConsoleTextAttribute(hConsole, 10);
         cout << "3. Gestion Inventario " << endl;
-        SetConsoleTextAttribute(hConsole, 7);
+        SetConsoleTextAttribute(hConsole, 3);
         cout << "4. Historial clinico " << endl;
         SetConsoleTextAttribute(hConsole, 6);
         cout << "5. Registro de Ventas " << endl;
@@ -64,6 +66,7 @@ void menuPropietario() {
     int opcion;
     do {
     	system("cls");
+    	SetConsoleTextAttribute(hConsole, 9);
         cout << "\nGestión de Propietarios\n\n";
         cout << "1. Agregar Propietario\n";
         cout << "2. Listar Propietarios\n";
@@ -174,6 +177,7 @@ void menuHistorial() {
 int opcion;
     do {
     	system("cls");
+    	SetConsoleTextAttribute(hConsole, 3);
         cout << "\nHistorial clinico\n\n";
         cout << "1. Agregar o actualziar historial clinico\n";
         cout << "2. Listar historiales clinicos\n";
