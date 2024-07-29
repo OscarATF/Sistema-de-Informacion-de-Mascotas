@@ -73,6 +73,7 @@ void mostrarVentas(){
         cout << "Venta " << ventas[i].id << "\t\tFecha: "<<ventas[i].fecha<<":\n\n";
         cout << "Cliente: " << ventas[i].nombreDelCliente << "\n";
         cout << "Producto: " << ventas[i].datosdelproducto.nombreDelProducto << "\n";
+        cout << "ID del producto: " << ventas[i].datosdelproducto.id_producto << "\n";
 		cout << "Precio del producto: S/"<< ventas[i].datosdelproducto.precio<< "\n";
         cout << "Cantidad de compra: " << ventas[i].cantidad << "\n";
         cout << "Precio cancelado: S/" << ventas[i].precioDeVenta << "\n";
@@ -93,13 +94,15 @@ void buscarVentas(){
 	for(int i=0;i<cantidaddeventas;i++){
 		if(ventas[i].idproductoComprado==buscar){
 			cout << "Venta " << ventas[i].id << "\t\tFecha: "<<ventas[i].fecha<<":\n\n";
-        	cout << "Producto: " << ventas[i].idproductoComprado << "\n";
-        	cout << "Cantidad: " << ventas[i].cantidad << "\n";
-        	cout << "Precio que fue vendido: S/" << ventas[i].precioDeVenta << "\n";
-        	cout << "Cliente: " << ventas[i].nombreDelCliente << "\n";
-        	cout << "Metodo de Pago: " << ventas[i].metodoDePago << "\n";
-        	cout << "-----------------------------------------\n";
-        	cant++;
+	        cout << "Cliente: " << ventas[i].nombreDelCliente << "\n";
+	        cout << "Producto: " << ventas[i].datosdelproducto.nombreDelProducto << "\n";
+	        cout << "ID del producto: " << ventas[i].datosdelproducto.id_producto << "\n";
+			cout << "Precio del producto: S/"<< ventas[i].datosdelproducto.precio<< "\n";
+	        cout << "Cantidad de compra: " << ventas[i].cantidad << "\n";
+	        cout << "Precio cancelado: S/" << ventas[i].precioDeVenta << "\n";
+	        cout << "Metodo de Pago: " << ventas[i].metodoDePago << "\n";
+	        cout << "-----------------------------------------\n";
+	        cant++;
 		}
 	}
 	if(cant==0){
